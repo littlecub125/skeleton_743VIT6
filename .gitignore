@@ -1,0 +1,12 @@
+# Build output
+/Debug/
+/Release/
+
+# Eclipse
+.metadata/
+*.launch
+.settings/org.eclipse.core.resources.prefs
+
+# OS
+Thumbs.db
+.DS_Store
