@@ -6,6 +6,8 @@
 .metadata/
 *.launch
 .settings/org.eclipse.core.resources.prefs
+.ide.log
+.log
 
 # OS
 Thumbs.db
