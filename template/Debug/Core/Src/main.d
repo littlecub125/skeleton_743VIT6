@@ -32,7 +32,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
- D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h
+ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h
 
 ../Core/Inc/main.h:
 
@@ -103,3 +104,5 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:

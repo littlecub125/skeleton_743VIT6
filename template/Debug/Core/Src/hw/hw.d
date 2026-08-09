@@ -32,7 +32,8 @@ Core/Src/hw/hw.o: ../Core/Src/hw/hw.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
- D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h
+ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw.h:
 
@@ -103,3 +104,5 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:

@@ -26,12 +26,6 @@ typedef struct
 
 //-- Variables
 //
-/* @formatter:off */
-const uart_info_t uart_info[HW_UART_MAX_CH] = {
-    { "UART_1", "CLI", 1000000 },
-//    { "UART_3", "ESP32", 1000000 },
-};
-/* @formatter:on */
 static uart_tbl_t uart_tbl[HW_UART_MAX_CH];
 
 
@@ -55,7 +49,7 @@ bool uartOpen(UartPortName_t name)
   return true;
 }
 
-bool uartIsOopen(UartPortName_t name)
+bool uartIsOpen(UartPortName_t name)
 {
   return uart_tbl[name].is_open;
 }

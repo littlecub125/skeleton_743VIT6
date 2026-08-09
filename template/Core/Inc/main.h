@@ -57,6 +57,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define PE03_VDD_LED_GPIO_O_Pin GPIO_PIN_3
+#define PE03_VDD_LED_GPIO_O_GPIO_Port GPIOE
+#define PC13_VDD_LED_SW_GPIO_I_Pin GPIO_PIN_13
+#define PC13_VDD_LED_SW_GPIO_I_GPIO_Port GPIOC
 #define PB10_ESP_UART_TX_Pin GPIO_PIN_10
 #define PB10_ESP_UART_TX_GPIO_Port GPIOB
 #define PB11_ESP_UART_RX_Pin GPIO_PIN_11

@@ -97,7 +97,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   /* @formatter:off */
   hw_config_t hw_cfg = {
-      .h_uart = { &huart1},
+      .h_uart = { &huart1, &huart3},
 //      .h_i2c = { },
 //      .h_spi = { },
 //      .h_adc = { },
@@ -105,15 +105,31 @@ int main(void)
     /* @formatter:on */
   
   hwInit(&hw_cfg);
+  uartPrintf(HW_UART_CH_CLI, "cli# ");
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    uartPrintf(HW_UART_CH_CLI, "hello");
+    if (uartAvailable(HW_UART_CH_CLI))
+    {
+      uint8_t data = uartRead(HW_UART_CH_CLI);
+
+      if (data == '\r')
+      {
+        uartPrintf(HW_UART_CH_CLI, "\r\n");
+        uartPrintf(HW_UART_CH_CLI, "cli# ");
+      }
+      else
+      {
+        uartPrintf(HW_UART_CH_CLI, "%c", data);
+      }
+    }
+
     HAL_Delay(1000);
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -269,10 +285,29 @@ static void MX_USART3_UART_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOE_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(PE03_VDD_LED_GPIO_O_GPIO_Port, PE03_VDD_LED_GPIO_O_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin : PE03_VDD_LED_GPIO_O_Pin */
+  GPIO_InitStruct.Pin = PE03_VDD_LED_GPIO_O_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(PE03_VDD_LED_GPIO_O_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC13_VDD_LED_SW_GPIO_I_Pin */
+  GPIO_InitStruct.Pin = PC13_VDD_LED_SW_GPIO_I_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(PC13_VDD_LED_SW_GPIO_I_GPIO_Port, &GPIO_InitStruct);
 
 }
 

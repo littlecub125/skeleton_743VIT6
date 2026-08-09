@@ -10,6 +10,7 @@
 
 #include "hw_def.h"
 #include "uart.h"
+#include "gpio.h"
 
 typedef struct
 {

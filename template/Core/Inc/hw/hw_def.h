@@ -31,18 +31,22 @@
 typedef enum
 {
   HW_UART_CH_CLI,
+  HW_UART_CH_ESP,
   HW_UART_MAX_CH,
 } UartPortName_t;
 /* @formatter:on */
 #endif
 
 #ifdef  _USE_HW_GPIO
-
+/* @formatter:off */
 typedef enum
 {
-  GPIO_PIN_MAX,
+  GPIO_PIN_O_VDD_LED,
+  GPIO_PIN_I_VDD_LED_SW,
+  GPIO_PIN_IO_MAX,
 } GpioPinName_t;
 
+/* @formatter:on */
 #endif
 
 #ifdef  _USE_HW_PWM
