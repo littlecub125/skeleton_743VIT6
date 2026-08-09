@@ -10,6 +10,9 @@
 
 
 #include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdbool.h>
 
 //#define _USE_HW_RTOS
 //#define _USE_HW_MICROS
@@ -24,14 +27,12 @@
 #define _USE_HW_ADC
 
 #ifdef  _USE_HW_UART
-#define   UART_RX_BUF_LENGTH      256
-#define   UART_TX_BUF_LENGTH      256
 /* @formatter:off */
 typedef enum
 {
   HW_UART_CH_CLI,
   HW_UART_MAX_CH,
-} UART_NAME;
+} UartPortName_t;
 /* @formatter:on */
 #endif
 
@@ -40,7 +41,7 @@ typedef enum
 typedef enum
 {
   GPIO_PIN_MAX,
-} GPIO_PIN_NAME;
+} GpioPinName_t;
 
 #endif
 
@@ -60,7 +61,7 @@ typedef enum
 typedef enum
 {
   ADC_CH_MAX,
-} ADC_CH_NAME;
+} AdcChNAME_t;
 
 #endif
 #endif /* INC_HW_HW_DEF_H_ */
