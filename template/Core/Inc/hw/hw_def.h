@@ -16,7 +16,7 @@
 
 //#define _USE_HW_RTOS
 //#define _USE_HW_MICROS
-//#define _USE_HW_QSPI
+#define _USE_HW_QSPI
 //#define _USE_HW_FLASH
 //#define _USE_HW_NVS
 #define _USE_HW_UART
@@ -25,6 +25,7 @@
 #define _USE_HW_I2C
 #define _USE_HW_SPI
 #define _USE_HW_ADC
+#define _USE_HW_W25Q64
 
 #ifdef  _USE_HW_UART
 /* @formatter:off */
@@ -34,19 +35,20 @@ typedef enum
   HW_UART_CH_ESP,
   HW_UART_MAX_CH,
 } UartPortName_t;
-/* @formatter:on */
+
 #endif
 
 #ifdef  _USE_HW_GPIO
-/* @formatter:off */
+
 typedef enum
 {
-  GPIO_PIN_O_VDD_LED,
-  GPIO_PIN_I_VDD_LED_SW,
-  GPIO_PIN_IO_MAX,
+  HW_GPIO_PIN_O_VDD_LED,
+  HW_GPIO_PIN_I_VDD_LED_SW,
+  HW_GPIO_PIN_O_W25Q64_CS,
+  HW_GPIO_PIN_IO_MAX,
 } GpioPinName_t;
 
-/* @formatter:on */
+
 #endif
 
 #ifdef  _USE_HW_PWM
@@ -54,18 +56,34 @@ typedef enum
 #endif
 
 #ifdef  _USE_HW_I2C
-
+typedef enum
+{
+  HW_I2C_MAX_CH
+} I2CChName_t;
 #endif
 
 #ifdef  _USE_HW_SPI
+typedef enum
+{
+  HW_SPI_CH_FLASH,
+  HW_SPI_MAX_CH,
+} SpiChName_t;;
+#endif
 
+#ifdef  _USE_HW_QSPI
+typedef enum
+{
+  HW_QSPI_CH_FLASH,
+  HW_QSPI_MAX_CH,
+} QspiChName_t;;
 #endif
 
 #ifdef  _USE_HW_ADC
 typedef enum
 {
   ADC_CH_MAX,
-} AdcChNAME_t;
+} AdcChName_t;
 
 #endif
+/* @formatter:on */
 #endif /* INC_HW_HW_DEF_H_ */

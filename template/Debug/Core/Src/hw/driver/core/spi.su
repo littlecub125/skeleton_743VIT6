@@ -1,0 +1,4 @@
+spi.c:32:6:spiInit	24	static
+spi.c:42:6:spiOpen	16	static
+spi.c:52:6:spiIsOpen	16	static
+spi.c:57:6:spiTransfer	32	static

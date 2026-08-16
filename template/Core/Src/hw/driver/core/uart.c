@@ -8,14 +8,6 @@
 
 //-- Definition
 //
-
-typedef struct
-{
-  const char *ch_name;
-  const char *usage;
-  const uint32_t baudrate;
-} uart_info_t;
-
 typedef struct
 {
   UART_HandleTypeDef *h_uart;

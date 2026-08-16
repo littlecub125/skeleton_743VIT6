@@ -24,9 +24,10 @@ typedef struct
 //-- Variables
 //
 /* @formatter:off */
-static gpio_tbl_t gpio_tbl[GPIO_PIN_IO_MAX] = {
+static gpio_tbl_t gpio_tbl[HW_GPIO_PIN_IO_MAX] = {
   { PE03_VDD_LED_GPIO_O_GPIO_Port, PE03_VDD_LED_GPIO_O_Pin, GPIO_TYPE_OUTPUT, GPIO_PIN_RESET, "VDD_LED" },
   { PC13_VDD_LED_SW_GPIO_I_GPIO_Port, PC13_VDD_LED_SW_GPIO_I_Pin, GPIO_TYPE_INPUT, GPIO_PIN_RESET, "VDD_LED_SW" },
+  { PD06_W25Q64_SPI_CS_GPIO_Port, PD06_W25Q64_SPI_CS_Pin, GPIO_TYPE_OUTPUT, GPIO_PIN_SET, "W25Q64_CS"},
 };
 /* @formatter:on */
 bool gpioInit(void)
@@ -36,7 +37,7 @@ bool gpioInit(void)
 
 bool gpioSetPin(GpioPinName_t pin, GPIO_PinState state)
 {
-  if (pin >= GPIO_PIN_IO_MAX || gpio_tbl[pin].type != GPIO_TYPE_OUTPUT)
+  if (pin >= HW_GPIO_PIN_IO_MAX || gpio_tbl[pin].type != GPIO_TYPE_OUTPUT)
     return false;
   if (gpioGetOutputStatus(pin) != state)
   {
@@ -47,7 +48,7 @@ bool gpioSetPin(GpioPinName_t pin, GPIO_PinState state)
 
 bool gpioTogglePin(GpioPinName_t pin)
 {
-  if (pin >= GPIO_PIN_IO_MAX || gpio_tbl[pin].type != GPIO_TYPE_OUTPUT)
+  if (pin >= HW_GPIO_PIN_IO_MAX || gpio_tbl[pin].type != GPIO_TYPE_OUTPUT)
     return false;
   HAL_GPIO_TogglePin(gpio_tbl[pin].port, gpio_tbl[pin].pin);
   return true;
@@ -55,14 +56,14 @@ bool gpioTogglePin(GpioPinName_t pin)
 
 GPIO_PinState gpioGetOutputStatus(GpioPinName_t pin)
 {
-  if (pin >= GPIO_PIN_IO_MAX || gpio_tbl[pin].type != GPIO_TYPE_OUTPUT)
+  if (pin >= HW_GPIO_PIN_IO_MAX || gpio_tbl[pin].type != GPIO_TYPE_OUTPUT)
     return GPIO_PIN_RESET;
   return HAL_GPIO_ReadPin(gpio_tbl[pin].port, gpio_tbl[pin].pin);
 }
 
 GPIO_PinState gpioGetInputStatus(GpioPinName_t pin)
 {
-  if (pin >= GPIO_PIN_IO_MAX || gpio_tbl[pin].type != GPIO_TYPE_INPUT)
+  if (pin >= HW_GPIO_PIN_IO_MAX || gpio_tbl[pin].type != GPIO_TYPE_INPUT)
     return GPIO_PIN_RESET;
   return HAL_GPIO_ReadPin(gpio_tbl[pin].port, gpio_tbl[pin].pin);
 }

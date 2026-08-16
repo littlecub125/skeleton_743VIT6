@@ -5,7 +5,6 @@
  *      Author: Yubin Kim
  */
 #include "hw.h"
-
 //-- Definition
 //
 
@@ -20,16 +19,18 @@
 bool hwInit(hw_config_t *p_cfg)
 {
   bool ret = true;
-
+  gpioInit();
 #ifdef _USE_HW_UART
   ret &= uartInit(p_cfg->h_uart);
 #endif
 //#ifdef _USE_HW_I2C
 //  ret &= i2c_init(p_cfg->h_i2c);
 //#endif
-//#ifdef _USE_HW_SPI
-//  ret &= spi_init(p_cfg->h_spi);
-//#endif
-
+#ifdef _USE_HW_SPI
+  ret &= spiInit(p_cfg->h_spi);
+#endif
+#ifdef _USE_HW_QSPI
+  ret &= qspiInit(p_cfg->h_qspi);
+#endif
   return ret;
 }

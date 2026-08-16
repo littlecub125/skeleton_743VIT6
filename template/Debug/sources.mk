@@ -20,7 +20,9 @@ OBJCOPY_BIN :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Core/Src/ap/thread \
 Core/Src/hw/driver/core \
+Core/Src/hw/driver \
 Core/Src/hw \
 Core/Src \
 Core/Startup \

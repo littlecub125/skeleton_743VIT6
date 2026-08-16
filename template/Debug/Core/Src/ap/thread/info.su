@@ -1,0 +1,4 @@
+info.c:36:6:infoCliInit	4	static
+info.c:41:6:cliAdd	16	static
+info.c:53:6:infoCliUpdate	16	static
+info.c:78:13:cliExecute	64	static

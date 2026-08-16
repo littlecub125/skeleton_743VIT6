@@ -27,13 +27,19 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h \
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h
 
 ../Core/Inc/main.h:
 
@@ -93,6 +99,12 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
 
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h:
+
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
+
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
+
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
@@ -106,3 +118,9 @@ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
 D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h:
+
+D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
