@@ -56,11 +56,13 @@ bool uartClose(UartPortName_t name)
   return true;
 }
 
-bool uartAvailable(UartPortName_t name)
+bool uartAvailable(UartPortName_t ch)
 {
-  return __HAL_UART_GET_FLAG(uart_tbl[name].h_uart, UART_FLAG_RXNE);
-}
+  if (__HAL_UART_GET_FLAG(uart_tbl[ch].h_uart, UART_FLAG_ORE))
+    __HAL_UART_CLEAR_OREFLAG(uart_tbl[ch].h_uart);   // 오버런 걸렸으면 풀어줌
 
+  return __HAL_UART_GET_FLAG(uart_tbl[ch].h_uart, UART_FLAG_RXNE);
+}
 uint8_t uartRead(UartPortName_t name)
 {
   uint8_t data = 0;

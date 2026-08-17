@@ -13,6 +13,8 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
+#include <stdlib.h>
 
 //#define _USE_HW_RTOS
 //#define _USE_HW_MICROS

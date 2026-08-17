@@ -153,5 +153,72 @@ bool w25q64SectorErase(W25q64Ch_t ch, uint32_t addr)
 
 static void cliW25q64(int argc, char *argv[])
 {
+  bool ret = false;
 
+  W25q64Ch_t ch = W25Q64_CH_SPI;   // 지금은 SPI 채널 고정, 필요하면 인자로 뺄 수 있음
+
+  if (argc == 2)
+  {
+    if (cliCheck(argv[1], "id") == 0)
+    {
+      uint8_t mfr;
+      uint16_t dev_id;
+      bool ok = w25q64ReadId(ch, &mfr, &dev_id);
+      cliPrintf("mfr=%02X dev_id=%04X ok=%d\r\n", mfr, dev_id,
+          ok);
+      ret = true;
+    }
+  }
+  else if (argc == 3)
+  {
+    if (cliCheck(argv[1], "erase") == 0)
+    {
+      uint32_t addr = strtoul(argv[2], NULL, 0);
+      bool ok = w25q64SectorErase(ch, addr);
+      cliPrintf("erase addr=0x%06lX ok=%d\r\n", addr, ok);
+      ret = true;
+    }
+  }
+  else if (argc == 4)
+  {
+    if (cliCheck(argv[1], "read"))
+    {
+      uint32_t addr = strtoul(argv[2], NULL, 0);
+      uint32_t len = strtoul(argv[3], NULL, 0);
+      uint8_t buf[32] = { 0, };
+      if (len > sizeof(buf))
+        len = sizeof(buf);
+
+      if (!w25q64Read(ch, addr, buf, len))
+      {
+        cliPrintf("read fail\r\n");
+      }
+      char line[100];
+      int pos = 0;
+      for (uint32_t i = 0; i < len; i++)
+        pos += snprintf(line + pos, sizeof(line) - pos, "%02X ", buf[i]);
+
+      cliPrintf("%s", line);   // 여기서 한 번에 찍고 \r\n은 cliPrintf가 자동 추가
+      ret = true;
+    }
+    else if (cliCheck(argv[1], "write"))
+    {
+      uint32_t addr = strtoul(argv[2], NULL, 0);
+      uint32_t len = strlen(argv[3]);
+      bool ok = w25q64PageProgram(ch, addr, (const uint8_t*) argv[3], len);
+      cliPrintf("write addr=0x%06lX len=%lu ok=%d\r\n", addr,
+          len, ok);
+      ret = true;
+    }
+  }
+
+
+  if (ret == false)
+  {
+    cliPrintf("w25q64 id");
+    cliPrintf("w25q64 erase [addr]");
+    cliPrintf("w25q64 read [addr] [len]");
+    cliPrintf("w25q64 write [addr] [data]");
+  }
+  
 }

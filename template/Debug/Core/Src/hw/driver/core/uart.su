@@ -3,7 +3,7 @@ uart.c:34:6:uartOpen	16	static
 uart.c:44:6:uartIsOpen	16	static
 uart.c:49:6:uartClose	16	static
 uart.c:59:6:uartAvailable	16	static
-uart.c:64:9:uartRead	24	static
-uart.c:71:10:uartReadBytes	40	static
-uart.c:79:10:uartWrite	24	static
-uart.c:87:10:uartPrintf	156	static
+uart.c:66:9:uartRead	24	static
+uart.c:73:10:uartReadBytes	40	static
+uart.c:81:10:uartWrite	24	static
+uart.c:89:10:uartPrintf	156	static
