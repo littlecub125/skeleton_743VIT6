@@ -83,7 +83,9 @@ typedef enum
 #ifdef  _USE_HW_ADC
 typedef enum
 {
-  ADC_CH_MAX,
+  HW_ADC_CH_VBAT,
+  HW_ADC_CH_TEMP,
+  HW_ADC_CH_MAX,
 } AdcChName_t;
 
 #endif

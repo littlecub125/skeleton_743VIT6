@@ -1,0 +1,4 @@
+adc.c:29:6:adcInit	24	static
+adc.c:39:6:adcOpen	16	static
+adc.c:49:10:adcRead	24	static
+adc.c:69:7:adcReadVoltage	24	static

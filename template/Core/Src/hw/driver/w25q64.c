@@ -40,7 +40,7 @@ bool w25q64Init(void)
 {
   bool ret = false;
 
-  cliAdd("w25q", cliW25q64);
+  cliAdd("w25q64", cliW25q64);
   return ret;
 }
 
@@ -98,7 +98,7 @@ bool w25q64ReadId(W25q64Ch_t ch, uint8_t *p_mfr, uint16_t *p_dev_id)
   *p_mfr = rx[0];                              // EFh (Winbond)
   *p_dev_id = ((uint16_t) rx[1] << 8) | rx[2];      // 7017h (W25Q64JV)
 
-  return (*p_mfr == 0xEF);
+  return (*p_mfr == 0xEF || *p_mfr == 0x85);
 }
 
 bool w25q64IsBusy(W25q64Ch_t ch)
@@ -159,23 +159,26 @@ static void cliW25q64(int argc, char *argv[])
 
   if (argc == 2)
   {
-    if (cliCheck(argv[1], "id") == 0)
+    if (cliCheck(argv[1], "id"))
     {
       uint8_t mfr;
       uint16_t dev_id;
       bool ok = w25q64ReadId(ch, &mfr, &dev_id);
-      cliPrintf("mfr=%02X dev_id=%04X ok=%d\r\n", mfr, dev_id,
-          ok);
+      cliPrintf("mfr=%02X", mfr);
+      cliPrintf("dev_id=%04X", dev_id);
+      cliPrintf("ok=%d", ok);
       ret = true;
     }
   }
   else if (argc == 3)
   {
-    if (cliCheck(argv[1], "erase") == 0)
+    if (cliCheck(argv[1], "erase"))
     {
       uint32_t addr = strtoul(argv[2], NULL, 0);
       bool ok = w25q64SectorErase(ch, addr);
-      cliPrintf("erase addr=0x%06lX ok=%d\r\n", addr, ok);
+      cliPrintf("erase");
+      cliPrintf("addr=0x%06lX", addr);
+      cliPrintf("ok=%d", ok);
       ret = true;
     }
   }
