@@ -41,7 +41,8 @@ Core/Src/hw/hw.o: ../Core/Src/hw/hw.c \
  D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/adc.h
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw.h:
 
@@ -130,3 +131,5 @@ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/adc.h:

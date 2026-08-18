@@ -114,7 +114,7 @@ int main(void)
 //      .h_i2c = { &hspi1, },
       .h_spi = { &hspi1 },
       .h_qspi = { &hqspi },
-//      .h_adc = { },
+      .h_adc = { &hadc3, &hadc3 },
       };
     /* @formatter:on */
   
@@ -248,6 +248,7 @@ static void MX_ADC3_Init(void)
   }
   /** Configure Regular Channel
   */
+  sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
   sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc3, &sConfig) != HAL_OK)
   {

@@ -32,5 +32,9 @@ bool hwInit(hw_config_t *p_cfg)
 #ifdef _USE_HW_QSPI
   ret &= qspiInit(p_cfg->h_qspi);
 #endif
+#ifdef _USE_HW_ADC
+  adcInit(p_cfg->h_adc);
+#endif
+
   return ret;
 }

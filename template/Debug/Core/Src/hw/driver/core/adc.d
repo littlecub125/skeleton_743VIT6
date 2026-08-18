@@ -36,7 +36,9 @@ Core/Src/hw/driver/core/adc.o: ../Core/Src/hw/driver/core/adc.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/adc.h:
 
@@ -115,3 +117,7 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
+
+D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:

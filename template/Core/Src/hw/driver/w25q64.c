@@ -28,8 +28,8 @@ static void cliW25q64(int argc, char *argv[]);
 //
 static const w25q64_flash_t flash_tbl[W25Q64_MAX_CH] =
 {
-  { w25q64QspiSendCmd },
   { w25q64SpiSendCmd },
+  { w25q64QspiSendCmd },
 };
 
 static uint32_t time_out = 100;
@@ -52,7 +52,7 @@ static bool w25q64CsSelect(bool status)
 static bool w25q64SpiSendCmd(uint8_t cmd, uint32_t addr,
     const uint8_t *tx, uint8_t *rx, uint32_t data_len)
 {
-  bool ret = false;
+  bool ret = true;
   uint8_t hdr[4];
   uint32_t hdr_len = 1;
 

@@ -6,6 +6,7 @@
  */
 
 #include "adc.h"
+#include "info.h"
 
 //-- Definition
 //
@@ -20,7 +21,7 @@ typedef struct
 
 //-- Functions
 //
-
+static void cliAdc(int argc, char *argv[]);
 
 //-- Variables
 //
@@ -33,6 +34,7 @@ bool adcInit(ADC_HandleTypeDef *h_adc_list[])
     adc_tbl[i].h_adc = h_adc_list[i];
     adc_tbl[i].is_open = false;
   }
+  cliAdd("adc", cliAdc);
   return true;
 }
 
@@ -66,21 +68,64 @@ uint16_t adcRead(AdcChName_t ch)
   return (ch == HW_ADC_CH_VBAT) ? vbat_raw : temp_raw;
 }
 
-float adcReadVoltage(AdcChName_t ch)
+int32_t adcReadVoltage(AdcChName_t ch)
 {
   uint16_t raw = adcRead(ch);
   float ret = 0;
 
   if (ch == HW_ADC_CH_VBAT)
   {
-    // VBAT는 하드웨어가 1/4로 나눠서 넣었으니 4배 곱해서 mV로
-    ret = ((float) raw * 3300.0f * 4.0f / 65535.0f);   // 16bit 기준(4095면 12bit)
+    // raw = 읽은 값
+    // 3300 = 입력전압
+    // 실제전압 = ADC 핀 전압 * 4
+    ret = ((int32_t) raw * 3300.0f * 4.0f / 65535.0f);  // 16bit 기준(4095면 12bit)
   }
   else if (ch == HW_ADC_CH_TEMP)
   {
-    ret = (float) (raw - TS_CAL1) * (110.0f - 30.0f)
-        / (float) (TS_CAL2 - TS_CAL1) + 30.0f;
+    ret = (int32_t) (raw - TS_CAL1) * (110.0f - 30.0f)
+        / (int32_t) (TS_CAL2 - TS_CAL1) + 30.0f;
   }
 
   return ret;
+}
+
+
+static void cliAdc(int argc, char *argv[])
+{
+  bool ret = false;
+
+  if (argc == 2)
+  {
+    if (cliCheck(argv[1], "read"))
+    {
+      int32_t adc_read[HW_ADC_CH_MAX] = { 0, };
+      for (int i = 0; i < HW_ADC_CH_MAX; i++)
+      {
+        adc_read[i] = adcReadVoltage(i);
+      }
+      cliPrintf("V_BAT : %d mV", adc_read[0]);
+      cliPrintf("V_TEMP : %d C", adc_read[1]);
+      ret = true;
+    }
+    else if (cliCheck(argv[1], "raw"))
+    {
+      uint16_t vbat_raw = adcRead(HW_ADC_CH_VBAT);
+      uint16_t temp_raw = adcRead(HW_ADC_CH_TEMP);
+      cliPrintf("vbat_raw=%u", vbat_raw);
+      cliPrintf("temp_raw=%u", temp_raw);
+      ret = true;
+    }
+    else if (cliCheck(argv[1], "temp"))
+    {
+      cliPrintf("TS_CAL1=%u", TS_CAL1);
+      cliPrintf("TS_CAL2=%u", TS_CAL2);
+
+    }
+  }
+
+
+  if (ret == false)
+  {
+    cliPrintf("adc read");
+  }
 }

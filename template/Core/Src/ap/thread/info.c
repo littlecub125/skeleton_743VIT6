@@ -118,7 +118,7 @@ uint32_t cliPrintf(const char *fmt, ...)
   if (len <= 0)
     return 0;
   if (len >= ((int) sizeof(buf)) - 2)
-    len = sizeof(buf) - 1;
+    len = sizeof(buf) - 2;
   buf[len++] = '\r';
   buf[len++] = '\n';
   return uartWrite(HW_UART_CH_CLI, (uint8_t*) buf, (uint32_t) len);

@@ -12,6 +12,6 @@
 
 bool adcInit(ADC_HandleTypeDef *h_adc_list[]);
 uint16_t adcRead(AdcChName_t ch);
-float adcReadVoltage(AdcChName_t ch);
+int32_t adcReadVoltage(AdcChName_t ch);
 
 #endif /* INC_HW_DRIVER_CORE_ADC_H_ */
