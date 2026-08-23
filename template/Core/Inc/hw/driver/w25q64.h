@@ -6,8 +6,7 @@
  */
 
 #include "hw_def.h"
-#include "spi.h"
-#include "qspi.h"
+
 
 
 #ifndef INC_HW_DRIVER_W25Q64_H_

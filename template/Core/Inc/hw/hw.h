@@ -14,11 +14,14 @@
 #include "spi.h"
 #include "qspi.h"
 #include "adc.h"
+#include "i2c.h"
+#include "ssd1306.h"
+#include "w25q64.h"
 
 typedef struct
 {
   UART_HandleTypeDef *h_uart[HW_UART_MAX_CH];
-//  I2C_HandleTypeDef *h_i2c[HW_I2C_MAX_CH];
+  I2C_HandleTypeDef *h_i2c[HW_I2C_MAX_CH];
   SPI_HandleTypeDef *h_spi[HW_SPI_MAX_CH];
   QSPI_HandleTypeDef *h_qspi[HW_QSPI_MAX_CH];
   ADC_HandleTypeDef *h_adc[HW_ADC_CH_MAX];

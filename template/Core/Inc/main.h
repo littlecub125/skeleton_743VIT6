@@ -49,6 +49,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -65,10 +67,12 @@ void Error_Handler(void);
 #define PC13_VDD_LED_SW_GPIO_I_GPIO_Port GPIOC
 #define PB02_W25Q64_QSPI_CLK_Pin GPIO_PIN_2
 #define PB02_W25Q64_QSPI_CLK_GPIO_Port GPIOB
-#define PB10_ESP_UART_TX_Pin GPIO_PIN_10
-#define PB10_ESP_UART_TX_GPIO_Port GPIOB
-#define PB11_ESP_UART_RX_Pin GPIO_PIN_11
-#define PB11_ESP_UART_RX_GPIO_Port GPIOB
+#define PE08_RELAY_CTRL_Pin GPIO_PIN_8
+#define PE08_RELAY_CTRL_GPIO_Port GPIOE
+#define PB10_ESP_UART_TX_Pin GPIO_PIN_8
+#define PB10_ESP_UART_TX_GPIO_Port GPIOD
+#define PB11_ESP_UART_RX_Pin GPIO_PIN_9
+#define PB11_ESP_UART_RX_GPIO_Port GPIOD
 #define PD11_WS25Q64_QSPI_IO0_Pin GPIO_PIN_11
 #define PD11_WS25Q64_QSPI_IO0_GPIO_Port GPIOD
 #define PD12_WS25Q64_QSPI_IO1_Pin GPIO_PIN_12
@@ -79,8 +83,8 @@ void Error_Handler(void);
 #define PA09_CLI_UART_TX_GPIO_Port GPIOA
 #define PA10_CLI_UART_RX_Pin GPIO_PIN_10
 #define PA10_CLI_UART_RX_GPIO_Port GPIOA
-#define PD06_W25Q64_SPI_CS_Pin GPIO_PIN_6
-#define PD06_W25Q64_SPI_CS_GPIO_Port GPIOD
+#define PD06_W25Q64_SPI_CS_O_Pin GPIO_PIN_6
+#define PD06_W25Q64_SPI_CS_O_GPIO_Port GPIOD
 #define PD7_W25Q64_SPI_MOSI_Pin GPIO_PIN_7
 #define PD7_W25Q64_SPI_MOSI_GPIO_Port GPIOD
 #define P3B_W25Q64_SPI_SCK_Pin GPIO_PIN_3

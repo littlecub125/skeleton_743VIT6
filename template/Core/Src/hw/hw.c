@@ -23,9 +23,9 @@ bool hwInit(hw_config_t *p_cfg)
 #ifdef _USE_HW_UART
   ret &= uartInit(p_cfg->h_uart);
 #endif
-//#ifdef _USE_HW_I2C
-//  ret &= i2c_init(p_cfg->h_i2c);
-//#endif
+#ifdef _USE_HW_I2C
+  ret &= i2cInit(p_cfg->h_i2c);
+#endif
 #ifdef _USE_HW_SPI
   ret &= spiInit(p_cfg->h_spi);
 #endif
@@ -35,6 +35,10 @@ bool hwInit(hw_config_t *p_cfg)
 #ifdef _USE_HW_ADC
   adcInit(p_cfg->h_adc);
 #endif
+
+  w25q64Init();
+
+  SSD1306_Init();
 
   return ret;
 }

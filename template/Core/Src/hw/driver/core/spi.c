@@ -8,12 +8,6 @@
 
 //-- Definition
 //
-typedef struct
-{
-  const char *ch_name;
-  const char *usage;
-  const uint32_t baudrate;
-} spi_info_t;
 
 typedef struct
 {

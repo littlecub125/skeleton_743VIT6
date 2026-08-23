@@ -35,6 +35,8 @@ Core/Src/hw/hw.o: ../Core/Src/hw/hw.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
@@ -42,7 +44,11 @@ Core/Src/hw/hw.o: ../Core/Src/hw/hw.c \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/adc.h
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/adc.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/i2c.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/ssd1306.h \
+ D:/study/personal_project/template/template/Core/Inc/Lib/fonts.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/w25q64.h
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw.h:
 
@@ -118,6 +124,10 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
+
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
+
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
@@ -133,3 +143,11 @@ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h:
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/adc.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/i2c.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/ssd1306.h:
+
+D:/study/personal_project/template/template/Core/Inc/Lib/fonts.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/w25q64.h:

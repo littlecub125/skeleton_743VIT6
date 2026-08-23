@@ -1,5 +1,5 @@
-gpio.c:33:6:gpioInit	4	static
-gpio.c:38:6:gpioSetPin	16	static
-gpio.c:49:6:gpioTogglePin	16	static
-gpio.c:57:15:gpioGetOutputStatus	16	static
-gpio.c:64:15:gpioGetInputStatus	16	static
+gpio.c:34:6:gpioInit	4	static
+gpio.c:39:6:gpioSetPin	16	static
+gpio.c:50:6:gpioTogglePin	16	static
+gpio.c:58:15:gpioGetOutputStatus	16	static
+gpio.c:65:15:gpioGetInputStatus	16	static

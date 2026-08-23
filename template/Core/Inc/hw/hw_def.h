@@ -47,6 +47,7 @@ typedef enum
   HW_GPIO_PIN_O_VDD_LED,
   HW_GPIO_PIN_I_VDD_LED_SW,
   HW_GPIO_PIN_O_W25Q64_CS,
+  HW_GPIO_PIN_O_RELAY_CTRL,
   HW_GPIO_PIN_IO_MAX,
 } GpioPinName_t;
 
@@ -54,12 +55,17 @@ typedef enum
 #endif
 
 #ifdef  _USE_HW_PWM
-
+typedef enum
+{
+  HW_PWM_CH_MOTOR_1,
+  HW_PWM_MAX_CH
+} PWMPortName_t;
 #endif
 
 #ifdef  _USE_HW_I2C
 typedef enum
 {
+  HW_I2C_CH_DISPLAY_SSD_1306,
   HW_I2C_MAX_CH
 } I2CChName_t;
 #endif
