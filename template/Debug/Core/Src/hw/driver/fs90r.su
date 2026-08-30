@@ -1,0 +1,3 @@
+fs90r.c:25:6:fs90rInit	16	static
+fs90r.c:36:6:fs90rCmdSet	24	static
+fs90r.c:60:13:cliFs90r	40	static

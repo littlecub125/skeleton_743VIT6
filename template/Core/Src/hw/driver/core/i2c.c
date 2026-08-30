@@ -51,10 +51,14 @@ bool i2cWriteBytes(I2CChName_t name, uint8_t *p_data, uint32_t length)
 
   return true;
 }
-
 bool i2cReadBytes(I2CChName_t name, uint8_t dev_addr, uint8_t reg_addr,
     uint8_t *p_data, uint32_t length)
 {
+  if (HAL_I2C_Mem_Read(i2c_tbl[name].h_i2c, i2c_tbl[name].dev_addr, reg_addr,
+  I2C_MEMADD_SIZE_8BIT, p_data, length, 100) != HAL_OK)
+  {
+    return false;
+  }
   return true;
 }
 

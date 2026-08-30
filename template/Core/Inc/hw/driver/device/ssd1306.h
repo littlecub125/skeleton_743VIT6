@@ -21,6 +21,6 @@ typedef enum
   SSD1306_COLOR_WHITE = 0x01 /*!< Pixel is set. Color depends on LCD */
 } SSD1306_COLOR_t;
 
-uint8_t SSD1306_Init(void);
+uint8_t ssd1306Init(void);
 
 #endif /* INC_HW_SSD1306_H_ */

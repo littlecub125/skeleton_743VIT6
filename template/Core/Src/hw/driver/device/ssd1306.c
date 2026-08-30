@@ -159,7 +159,7 @@ void SSD1306_DrawBitmap(int16_t x, int16_t y, const unsigned char *bitmap,
   }
 }
 
-uint8_t SSD1306_Init(void)
+uint8_t ssd1306Init(void)
 {
 
   /* Init I2C */
@@ -171,6 +171,7 @@ uint8_t SSD1306_Init(void)
 //    /* Return false */
 //    return 0;
 //  }
+
   i2cOpen(HW_I2C_CH_DISPLAY_SSD_1306, SSD1306_I2C_ADDR);
   if (i2cDeviceReady(HW_I2C_CH_DISPLAY_SSD_1306) == false)
   {
@@ -716,44 +717,13 @@ static void cliSsd1306(int argc, char *argv[])
       ret = true;
     }
   }
-//  else if (argc == 4)
-//  {
-//    if (cliCheck(argv[1], "read"))
-//    {
-//      uint32_t addr = strtoul(argv[2], NULL, 0);
-//      uint32_t len = strtoul(argv[3], NULL, 0);
-//      uint8_t buf[32] = { 0, };
-//      if (len > sizeof(buf))
-//        len = sizeof(buf);
-//
-//      if (!w25q64Read(ch, addr, buf, len))
-//      {
-//        cliPrintf("read fail\r\n");
-//      }
-//      char line[100];
-//      int pos = 0;
-//      for (uint32_t i = 0; i < len; i++)
-//        pos += snprintf(line + pos, sizeof(line) - pos, "%02X ", buf[i]);
-//
-//      cliPrintf("%s", line);   // 여기서 한 번에 찍고 \r\n은 cliPrintf가 자동 추가
-//      ret = true;
-//    }
-//    else if (cliCheck(argv[1], "write"))
-//    {
-//      uint32_t addr = strtoul(argv[2], NULL, 0);
-//      uint32_t len = strlen(argv[3]);
-//      bool ok = w25q64PageProgram(ch, addr, (const uint8_t*) argv[3], len);
-//      cliPrintf("write addr=0x%06lX len=%lu ok=%d\r\n", addr, len, ok);
-//      ret = true;
-//    }
-//  }
+
 
   if (ret == false)
   {
     cliPrintf("ssd1306 addr");
     cliPrintf("ssd1306 write [str]");
   }
-
 }
 
 

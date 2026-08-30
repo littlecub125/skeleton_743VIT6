@@ -1,0 +1,12 @@
+w25q64.c:41:6:w25q64Init	40	static
+w25q64.c:60:13:w25q64CsSelect	16	static
+w25q64.c:64:13:w25q64SpiSendCmd	48	static
+w25q64.c:91:13:w25q64QspiSendCmd	88	static
+w25q64.c:108:6:w25q64ReadId	48	static
+w25q64.c:119:6:w25q64IsBusy	40	static
+w25q64.c:126:6:w25q64WaitBusy	24	static
+w25q64.c:137:6:w25q64WriteEnable	32	static
+w25q64.c:142:6:w25q64Read	40	static
+w25q64.c:148:6:w25q64PageProgram	40	static
+w25q64.c:161:6:w25q64SectorErase	32	static
+w25q64.c:169:13:cliW25q64	200	static

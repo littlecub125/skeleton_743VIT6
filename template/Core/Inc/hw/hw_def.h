@@ -28,6 +28,7 @@
 #define _USE_HW_SPI
 #define _USE_HW_ADC
 #define _USE_HW_W25Q64
+#define _USE_HW_SDMMC
 
 #ifdef  _USE_HW_UART
 /* @formatter:off */
@@ -58,8 +59,8 @@ typedef enum
 typedef enum
 {
   HW_PWM_CH_MOTOR_1,
-  HW_PWM_MAX_CH
-} PWMPortName_t;
+  HW_PWM_CH_MAX
+} PWMChName_t;
 #endif
 
 #ifdef  _USE_HW_I2C
@@ -95,5 +96,14 @@ typedef enum
 } AdcChName_t;
 
 #endif
+
+#ifdef _USE_HW_SDMMC
+typedef enum
+{
+  HW_SDMMC_CH_MICROSD,
+  HW_SDMMC_MAX_CH,
+} SdmmcChName_t;
+#endif
+
 /* @formatter:on */
 #endif /* INC_HW_HW_DEF_H_ */

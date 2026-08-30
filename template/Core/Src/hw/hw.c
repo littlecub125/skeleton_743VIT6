@@ -5,6 +5,7 @@
  *      Author: Yubin Kim
  */
 #include "hw.h"
+
 //-- Definition
 //
 
@@ -35,10 +36,19 @@ bool hwInit(hw_config_t *p_cfg)
 #ifdef _USE_HW_ADC
   adcInit(p_cfg->h_adc);
 #endif
+#ifdef _USE_HW_PWM
+  pwmInit(p_cfg->h_tim);
+#endif
+#ifdef _USE_HW_SDMMC
+  sdmmcInit(p_cfg->h_sd);
+#endif
 
   w25q64Init();
 
-  SSD1306_Init();
+
+  ssd1306Init();
+  FATFS_LinkDriver(&sdmmc_diskio_driver, SDPath);
+
 
   return ret;
 }

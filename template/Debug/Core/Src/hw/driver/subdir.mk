@@ -5,14 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/hw/driver/fs90r.c \
 ../Core/Src/hw/driver/ssd1306.c \
 ../Core/Src/hw/driver/w25q64.c 
 
 OBJS += \
+./Core/Src/hw/driver/fs90r.o \
 ./Core/Src/hw/driver/ssd1306.o \
 ./Core/Src/hw/driver/w25q64.o 
 
 C_DEPS += \
+./Core/Src/hw/driver/fs90r.d \
 ./Core/Src/hw/driver/ssd1306.d \
 ./Core/Src/hw/driver/w25q64.d 
 

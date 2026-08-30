@@ -1,7 +1,9 @@
-Core/Src/hw/driver/w25q64.o: ../Core/Src/hw/driver/w25q64.c \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/w25q64.h \
- D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
- ../Core/Inc/main.h ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
+Middlewares/Third_Party/FatFs/src/option/syscall.o: \
+ ../Middlewares/Third_Party/FatFs/src/option/syscall.c \
+ ../Middlewares/Third_Party/FatFs/src/option/../ff.h \
+ ../Middlewares/Third_Party/FatFs/src/option/../integer.h \
+ ../FATFS/Target/ffconf.h ../Core/Inc/main.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
@@ -33,21 +35,22 @@ Core/Src/hw/driver/w25q64.o: ../Core/Src/hw/driver/w25q64.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h \
- D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 
-D:/study/personal_project/template/template/Core/Inc/hw/driver/w25q64.h:
+../Middlewares/Third_Party/FatFs/src/option/../ff.h:
 
-D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
+../Middlewares/Third_Party/FatFs/src/option/../integer.h:
+
+../FATFS/Target/ffconf.h:
 
 ../Core/Inc/main.h:
 
@@ -115,6 +118,14 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h:
 
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h:
+
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h:
+
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h:
+
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h:
+
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
@@ -126,13 +137,3 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:
-
-D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h:
