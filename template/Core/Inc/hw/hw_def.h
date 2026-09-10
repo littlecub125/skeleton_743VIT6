@@ -49,6 +49,8 @@ typedef enum
   HW_GPIO_PIN_I_VDD_LED_SW,
   HW_GPIO_PIN_O_W25Q64_CS,
   HW_GPIO_PIN_O_RELAY_CTRL,
+  HW_GPIO_PIN_O_RC522_CS,
+  HW_GPIO_PIN_O_RC522_RST,
   HW_GPIO_PIN_IO_MAX,
 } GpioPinName_t;
 
@@ -74,7 +76,7 @@ typedef enum
 #ifdef  _USE_HW_SPI
 typedef enum
 {
-  HW_SPI_CH_FLASH,
+  HW_SPI_CH_FLASH_AND_RC522,
   HW_SPI_MAX_CH,
 } SpiChName_t;;
 #endif

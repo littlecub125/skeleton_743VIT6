@@ -11,6 +11,7 @@
 "./Core/Src/hw/driver/core/spi.o"
 "./Core/Src/hw/driver/core/uart.o"
 "./Core/Src/hw/driver/device/fs90r.o"
+"./Core/Src/hw/driver/device/rc522.o"
 "./Core/Src/hw/driver/device/sdmmc_diskio.o"
 "./Core/Src/hw/driver/device/ssd1306.o"
 "./Core/Src/hw/driver/device/w25q64.o"

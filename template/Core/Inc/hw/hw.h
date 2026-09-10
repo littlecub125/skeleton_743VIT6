@@ -20,6 +20,7 @@
 #include "pwm.h"
 #include "sdmmc.h"
 #include "sdmmc_diskio.h"
+#include "rc522.h"
 
 typedef struct
 {

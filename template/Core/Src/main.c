@@ -134,8 +134,7 @@ int main(void)
     /* @formatter:on */
   hwInit(&hw_cfg);
   infoCliInit();
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 900);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -622,15 +621,18 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOE, PE03_VDD_LED_GPIO_O_Pin|PE08_RELAY_CTRL_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(PD06_W25Q64_SPI_CS_O_GPIO_Port, PD06_W25Q64_SPI_CS_O_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, PA01_RC522_SPI1_CS_GPIO_O_Pin|PA02_RC522_SPI1_RST_GPIO_O_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(PD06_W25Q64_SPI1_CS_GPIO_O_GPIO_Port, PD06_W25Q64_SPI1_CS_GPIO_O_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pins : PE03_VDD_LED_GPIO_O_Pin PE08_RELAY_CTRL_Pin */
   GPIO_InitStruct.Pin = PE03_VDD_LED_GPIO_O_Pin|PE08_RELAY_CTRL_Pin;
@@ -645,12 +647,19 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(PC13_VDD_LED_SW_GPIO_I_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PD06_W25Q64_SPI_CS_O_Pin */
-  GPIO_InitStruct.Pin = PD06_W25Q64_SPI_CS_O_Pin;
+  /*Configure GPIO pins : PA01_RC522_SPI1_CS_GPIO_O_Pin PA02_RC522_SPI1_RST_GPIO_O_Pin */
+  GPIO_InitStruct.Pin = PA01_RC522_SPI1_CS_GPIO_O_Pin|PA02_RC522_SPI1_RST_GPIO_O_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PD06_W25Q64_SPI1_CS_GPIO_O_Pin */
+  GPIO_InitStruct.Pin = PD06_W25Q64_SPI1_CS_GPIO_O_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(PD06_W25Q64_SPI_CS_O_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(PD06_W25Q64_SPI1_CS_GPIO_O_GPIO_Port, &GPIO_InitStruct);
 
 }
 

@@ -1,5 +1,5 @@
-Core/Src/hw/hw.o: ../Core/Src/hw/hw.c \
- D:/study/personal_project/template/template/Core/Inc/hw/hw.h \
+Core/Src/hw/driver/device/rc522.o: ../Core/Src/hw/driver/device/rc522.c \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
  ../Core/Inc/main.h ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
@@ -43,26 +43,12 @@ Core/Src/hw/hw.o: ../Core/Src/hw/hw.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
- D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/adc.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/i2c.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/device/ssd1306.h \
- D:/study/personal_project/template/template/Core/Inc/Lib/fonts.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/device/w25q64.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/pwm.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/sdmmc.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/device/sdmmc_diskio.h \
- ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
- ../Middlewares/Third_Party/FatFs/src/diskio.h \
- ../Middlewares/Third_Party/FatFs/src/integer.h \
- ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h
 
-D:/study/personal_project/template/template/Core/Inc/hw/hw.h:
+D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
@@ -152,40 +138,10 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
+D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
 
-D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/adc.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/i2c.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/device/ssd1306.h:
-
-D:/study/personal_project/template/template/Core/Inc/Lib/fonts.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/device/w25q64.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/pwm.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/sdmmc.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/device/sdmmc_diskio.h:
-
-../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
-
-../Middlewares/Third_Party/FatFs/src/diskio.h:
-
-../Middlewares/Third_Party/FatFs/src/integer.h:
-
-../Middlewares/Third_Party/FatFs/src/ff.h:
-
-../FATFS/Target/ffconf.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h:

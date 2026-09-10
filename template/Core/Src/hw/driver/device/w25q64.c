@@ -78,11 +78,11 @@ static bool w25q64SpiSendCmd(uint8_t cmd, uint32_t addr, bool has_addr,
   }
 
   w25q64CsSelect(false);
-  ret &= spiTransfer(HW_SPI_CH_FLASH, hdr, NULL, hdr_len, time_out);
+  ret &= spiTransfer(HW_SPI_CH_FLASH_AND_RC522, hdr, NULL, hdr_len, time_out);
   if (tx != NULL)
-    ret &= spiTransfer(HW_SPI_CH_FLASH, tx, NULL, data_len, time_out);
+    ret &= spiTransfer(HW_SPI_CH_FLASH_AND_RC522, tx, NULL, data_len, time_out);
   if (rx != NULL)
-    ret &= spiTransfer(HW_SPI_CH_FLASH, NULL, rx, data_len, time_out);
+    ret &= spiTransfer(HW_SPI_CH_FLASH_AND_RC522, NULL, rx, data_len, time_out);
   ret &= w25q64CsSelect(true);
 
   return ret;

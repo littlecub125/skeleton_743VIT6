@@ -455,14 +455,14 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
     PB3 (JTDO/TRACESWO)     ------> SPI1_SCK
     PB4 (NJTRST)     ------> SPI1_MISO
     */
-    GPIO_InitStruct.Pin = PD7_W25Q64_SPI_MOSI_Pin;
+    GPIO_InitStruct.Pin = PD7_SPI1_MOSI_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
-    HAL_GPIO_Init(PD7_W25Q64_SPI_MOSI_GPIO_Port, &GPIO_InitStruct);
+    HAL_GPIO_Init(PD7_SPI1_MOSI_GPIO_Port, &GPIO_InitStruct);
 
-    GPIO_InitStruct.Pin = P3B_W25Q64_SPI_SCK_Pin|PB4_W25Q64_SPI_MISO_Pin;
+    GPIO_InitStruct.Pin = P3B_SPI1_SCK_Pin|PB4_SPI1_MISO_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -497,9 +497,9 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
     PB3 (JTDO/TRACESWO)     ------> SPI1_SCK
     PB4 (NJTRST)     ------> SPI1_MISO
     */
-    HAL_GPIO_DeInit(PD7_W25Q64_SPI_MOSI_GPIO_Port, PD7_W25Q64_SPI_MOSI_Pin);
+    HAL_GPIO_DeInit(PD7_SPI1_MOSI_GPIO_Port, PD7_SPI1_MOSI_Pin);
 
-    HAL_GPIO_DeInit(GPIOB, P3B_W25Q64_SPI_SCK_Pin|PB4_W25Q64_SPI_MISO_Pin);
+    HAL_GPIO_DeInit(GPIOB, P3B_SPI1_SCK_Pin|PB4_SPI1_MISO_Pin);
 
   /* USER CODE BEGIN SPI1_MspDeInit 1 */
 
