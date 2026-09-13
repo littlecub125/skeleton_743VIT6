@@ -6,6 +6,7 @@
  */
 
 #include "info.h"
+#include "uart.h"
 #include <string.h>
 
 //-- Definition
@@ -127,4 +128,15 @@ uint32_t cliPrintf(const char *fmt, ...)
 bool cliCheck(const char *buf, const char *cmd)
 {
   return strcmp(buf, cmd) == 0;
+}
+
+bool cliKeepLoop(void)
+{
+  if (uartAvailable(HW_UART_CH_CLI))
+  {
+    uint8_t data = uartRead(HW_UART_CH_CLI);
+    if (data == '\r' || data == '\n')
+      return false;   // 엔터 감지 — 중단
+  }
+  return true;         // 계속 진행
 }

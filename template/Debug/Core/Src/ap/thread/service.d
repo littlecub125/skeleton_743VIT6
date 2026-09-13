@@ -1,5 +1,6 @@
-Core/Src/hw/driver/device/rc522.o: ../Core/Src/hw/driver/device/rc522.c \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h \
+Core/Src/ap/thread/service.o: ../Core/Src/ap/thread/service.c \
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/service.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/fs90r.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
  ../Core/Inc/main.h ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
@@ -43,11 +44,14 @@ Core/Src/hw/driver/device/rc522.o: ../Core/Src/hw/driver/device/rc522.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/ssd1306.h \
+ D:/study/personal_project/template/template/Core/Inc/Lib/fonts.h
 
-D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h:
+D:/study/personal_project/template/template/Core/Inc/ap/thread/service.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/device/fs90r.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
@@ -137,8 +141,10 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 
-D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
+D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:
 
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h:
+D:/study/personal_project/template/template/Core/Inc/hw/driver/device/ssd1306.h:
+
+D:/study/personal_project/template/template/Core/Inc/Lib/fonts.h:

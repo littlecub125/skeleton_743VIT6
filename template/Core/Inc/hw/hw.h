@@ -21,6 +21,7 @@
 #include "sdmmc.h"
 #include "sdmmc_diskio.h"
 #include "rc522.h"
+#include "fs90r.h"
 
 typedef struct
 {

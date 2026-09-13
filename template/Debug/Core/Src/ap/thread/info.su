@@ -1,6 +1,7 @@
-info.c:35:6:infoCliInit	4	static
-info.c:40:6:cliAdd	16	static
-info.c:52:6:infoCliUpdate	16	static
-info.c:84:13:cliExecute	64	static
-info.c:109:10:cliPrintf	144	static
-info.c:127:6:cliCheck	16	static
+info.c:36:6:infoCliInit	4	static
+info.c:41:6:cliAdd	16	static
+info.c:53:6:infoCliUpdate	16	static
+info.c:85:13:cliExecute	64	static
+info.c:110:10:cliPrintf	144	static
+info.c:128:6:cliCheck	16	static
+info.c:133:6:cliKeepLoop	16	static

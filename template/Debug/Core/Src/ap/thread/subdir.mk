@@ -6,16 +6,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Core/Src/ap/thread/info.c \
+../Core/Src/ap/thread/service.c \
 ../Core/Src/ap/thread/status.c \
 ../Core/Src/ap/thread/system.c 
 
 OBJS += \
 ./Core/Src/ap/thread/info.o \
+./Core/Src/ap/thread/service.o \
 ./Core/Src/ap/thread/status.o \
 ./Core/Src/ap/thread/system.o 
 
 C_DEPS += \
 ./Core/Src/ap/thread/info.d \
+./Core/Src/ap/thread/service.d \
 ./Core/Src/ap/thread/status.d \
 ./Core/Src/ap/thread/system.d 
 

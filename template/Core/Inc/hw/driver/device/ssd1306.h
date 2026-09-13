@@ -22,5 +22,6 @@ typedef enum
 } SSD1306_COLOR_t;
 
 uint8_t ssd1306Init(void);
+void ssd1306SetStr(const char *sentence);
 
 #endif /* INC_HW_SSD1306_H_ */

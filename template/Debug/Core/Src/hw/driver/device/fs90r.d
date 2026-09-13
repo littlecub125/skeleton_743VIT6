@@ -44,8 +44,7 @@ Core/Src/hw/driver/device/fs90r.o: ../Core/Src/hw/driver/device/fs90r.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/pwm.h \
- D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/device/fs90r.h:
 
@@ -140,5 +139,3 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/pwm.h:
 
 D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:

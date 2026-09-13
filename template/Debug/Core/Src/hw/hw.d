@@ -60,7 +60,8 @@ Core/Src/hw/hw.o: ../Core/Src/hw/hw.c \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/integer.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/fs90r.h
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw.h:
 
@@ -189,3 +190,5 @@ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/sdmmc_disk
 ../FATFS/Target/ffconf.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/device/fs90r.h:

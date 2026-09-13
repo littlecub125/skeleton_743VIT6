@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "hw.h"
 #include "info.h"
+#include "service.h"
 
 /* USER CODE END Includes */
 
@@ -142,6 +143,7 @@ int main(void)
   while (1)
   {
     infoCliUpdate();
+    serviceUpdate();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -653,6 +655,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA03_SS5GL_SW_GPIO_I_Pin */
+  GPIO_InitStruct.Pin = PA03_SS5GL_SW_GPIO_I_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(PA03_SS5GL_SW_GPIO_I_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PD06_W25Q64_SPI1_CS_GPIO_O_Pin */
   GPIO_InitStruct.Pin = PD06_W25Q64_SPI1_CS_GPIO_O_Pin;

@@ -45,7 +45,6 @@ Core/Src/hw/driver/device/w25q64.o: ../Core/Src/hw/driver/device/w25q64.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h \
  D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/qspi.h
 
@@ -142,8 +141,6 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:
 
 D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h:
 

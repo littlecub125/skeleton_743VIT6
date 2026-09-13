@@ -46,8 +46,7 @@ Core/Src/hw/driver/device/ssd1306.o: \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/device/ssd1306.h \
  D:/study/personal_project/template/template/Core/Inc/Lib/fonts.h \
- D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/i2c.h:
 
@@ -144,5 +143,3 @@ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/ssd1306.h:
 D:/study/personal_project/template/template/Core/Inc/Lib/fonts.h:
 
 D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:

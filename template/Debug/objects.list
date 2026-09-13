@@ -1,5 +1,6 @@
 "./Core/Src/Lib/fonts.o"
 "./Core/Src/ap/thread/info.o"
+"./Core/Src/ap/thread/service.o"
 "./Core/Src/ap/thread/status.o"
 "./Core/Src/ap/thread/system.o"
 "./Core/Src/hw/driver/core/adc.o"

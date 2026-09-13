@@ -62,7 +62,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/sdmmc.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/device/sdmmc_diskio.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h \
- D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/fs90r.h \
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/service.h
 
 ../Core/Inc/main.h:
 
@@ -198,4 +200,8 @@ D:/study/personal_project/template/template/Core/Inc/hw/driver/device/sdmmc_disk
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/device/rc522.h:
 
+D:/study/personal_project/template/template/Core/Inc/hw/driver/device/fs90r.h:
+
 D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
+
+D:/study/personal_project/template/template/Core/Inc/ap/thread/service.h:
