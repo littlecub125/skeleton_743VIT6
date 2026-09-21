@@ -1,7 +1,7 @@
-sdmmc_diskio.c:31:6:sdmmcDiskioInit	16	static
-sdmmc_diskio.c:38:9:sdmmcDiskInit	16	static
-sdmmc_diskio.c:43:9:sdmmcDiskStatus	16	static
-sdmmc_diskio.c:48:9:sdmmcDiskRead	24	static
-sdmmc_diskio.c:55:9:sdmmcDiskWrite	24	static
-sdmmc_diskio.c:63:9:sdmmcDiskIoctl	16	static
-sdmmc_diskio.c:78:13:cliSdmmcDiskio	696	static
+sdmmc_diskio.c:31:6:sdmmcDiskioInit	8	static
+sdmmc_diskio.c:39:9:sdmmcDiskInit	16	static
+sdmmc_diskio.c:44:9:sdmmcDiskStatus	16	static
+sdmmc_diskio.c:49:9:sdmmcDiskRead	24	static
+sdmmc_diskio.c:56:9:sdmmcDiskWrite	24	static
+sdmmc_diskio.c:64:9:sdmmcDiskIoctl	16	static
+sdmmc_diskio.c:79:13:cliSdmmcDiskio	696	static

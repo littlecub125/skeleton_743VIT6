@@ -26,7 +26,7 @@
 #include "hw.h"
 #include "info.h"
 #include "service.h"
-
+#include "log.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -136,6 +136,7 @@ int main(void)
     /* @formatter:on */
   hwInit(&hw_cfg);
   infoCliInit();
+  logInit();
 
   /* USER CODE END 2 */
 

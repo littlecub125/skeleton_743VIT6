@@ -1,7 +1,7 @@
 sdmmc.c:30:6:sdmmcInit	24	static
-sdmmc.c:40:6:sdmmcOpen	16	static
-sdmmc.c:52:6:sdmmcIsCardPresent	16	static
-sdmmc.c:60:6:sdmmcReadBlocks	40	static
-sdmmc.c:76:6:sdmmcWriteBlocks	40	static
-sdmmc.c:92:10:sdmmcGetSectorCount	56	static
-sdmmc.c:99:13:cliSdmmc	616	static
+sdmmc.c:41:6:sdmmcOpen	16	static
+sdmmc.c:53:6:sdmmcIsCardPresent	16	static
+sdmmc.c:61:6:sdmmcReadBlocks	40	static
+sdmmc.c:77:6:sdmmcWriteBlocks	40	static
+sdmmc.c:93:10:sdmmcGetSectorCount	56	static
+sdmmc.c:100:13:cliSdmmc	616	static

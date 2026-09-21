@@ -41,7 +41,6 @@ bool hwInit(hw_config_t *p_cfg)
 #endif
 #ifdef _USE_HW_SDMMC
   sdmmcInit(p_cfg->h_sd);
-  FATFS_LinkDriver(&sdmmc_diskio_driver, SDPath);
   sdmmcDiskioInit();
 #endif
 
@@ -49,6 +48,7 @@ bool hwInit(hw_config_t *p_cfg)
   fs90rInit();
   rc522Init();
   ssd1306Init();
+
 
 
   return ret;

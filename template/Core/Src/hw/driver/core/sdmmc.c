@@ -35,6 +35,7 @@ bool sdmmcInit(SD_HandleTypeDef *h_sd_list[])
     sdmmc_tbl[i].is_open = false;
   }
   cliAdd("sdmmc", cliSdmmc);
+
   return true;
 }
 bool sdmmcOpen(SdmmcChName_t name)

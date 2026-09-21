@@ -22,6 +22,7 @@ OBJCOPY_BIN :=
 SUBDIRS := \
 Core/Src/Lib \
 Core/Src/ap/thread \
+Core/Src/ap/util \
 Core/Src/hw/driver/core \
 Core/Src/hw/driver/device \
 Core/Src/hw \

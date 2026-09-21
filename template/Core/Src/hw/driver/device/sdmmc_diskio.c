@@ -30,7 +30,8 @@ static FATFS sd_fatfs;
 
 void sdmmcDiskioInit(void)
 {
-  FRESULT fr = f_mount(&sd_fatfs, SDPath, 1);
+  FATFS_LinkDriver(&sdmmc_diskio_driver, SDPath);
+  f_mount(&sd_fatfs, SDPath, 1);
   cliAdd("sdfs", cliSdmmcDiskio);
 }
 
@@ -47,7 +48,7 @@ DSTATUS sdmmcDiskStatus(BYTE lun)
 
 DRESULT sdmmcDiskRead(BYTE lun, BYTE *buf, DWORD sector, UINT count)
 {
-  cliPrintf("disk_read  sector=%lu count=%u", sector, count);   // 디버그용 — sdmmcReadBlocks까지 실제로 내려가는지 확인
+//  cliPrintf("disk_read  sector=%lu count=%u", sector, count);   // 디버그용 — sdmmcReadBlocks까지 실제로 내려가는지 확인
   return sdmmcReadBlocks(HW_SDMMC_CH_MICROSD, buf, sector, count) ?
           RES_OK : RES_ERROR;
 }
@@ -55,7 +56,7 @@ DRESULT sdmmcDiskRead(BYTE lun, BYTE *buf, DWORD sector, UINT count)
 DRESULT sdmmcDiskWrite(BYTE lun, const BYTE *buf, DWORD sector,
     UINT count)
 {
-  cliPrintf("disk_write sector=%lu count=%u", sector, count);   // 디버그용 — sdmmcWriteBlocks까지 실제로 내려가는지 확인
+//  cliPrintf("disk_write sector=%lu count=%u", sector, count);   // 디버그용 — sdmmcWriteBlocks까지 실제로 내려가는지 확인
   return sdmmcWriteBlocks(HW_SDMMC_CH_MICROSD, buf, sector, count) ?
           RES_OK : RES_ERROR;
 }

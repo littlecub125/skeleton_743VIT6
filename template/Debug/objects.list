@@ -3,6 +3,7 @@
 "./Core/Src/ap/thread/service.o"
 "./Core/Src/ap/thread/status.o"
 "./Core/Src/ap/thread/system.o"
+"./Core/Src/ap/util/log.o"
 "./Core/Src/hw/driver/core/adc.o"
 "./Core/Src/hw/driver/core/gpio.o"
 "./Core/Src/hw/driver/core/i2c.o"
