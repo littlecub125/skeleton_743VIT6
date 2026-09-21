@@ -32,3 +32,5 @@ DRESULT sdmmcDiskWrite(BYTE lun, const BYTE *buf, DWORD sector,
 
 DRESULT sdmmcDiskIoctl(BYTE lun, BYTE cmd, void *buf);
 
+void sdmmcDiskioInit(void);
+

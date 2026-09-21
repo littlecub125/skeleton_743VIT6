@@ -48,7 +48,9 @@ Core/Src/hw/driver/device/sdmmc_diskio.o: \
  ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/integer.h \
- ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h
+ ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h \
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
+ ../Middlewares/Third_Party/FatFs/src/ff.h
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/device/sdmmc_diskio.h:
 
@@ -151,3 +153,7 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 ../Middlewares/Third_Party/FatFs/src/ff.h:
 
 ../FATFS/Target/ffconf.h:
+
+D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
+
+../Middlewares/Third_Party/FatFs/src/ff.h:
