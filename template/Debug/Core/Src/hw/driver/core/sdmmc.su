@@ -1,0 +1,6 @@
+sdmmc.c:29:6:sdmmcInit	24	static
+sdmmc.c:38:6:sdmmcOpen	16	static
+sdmmc.c:49:6:sdmmcIsCardPresent	16	static
+sdmmc.c:53:6:sdmmcReadBlocks	40	static
+sdmmc.c:69:6:sdmmcWriteBlocks	40	static
+sdmmc.c:85:10:sdmmcGetSectorCount	56	static

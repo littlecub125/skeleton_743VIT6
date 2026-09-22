@@ -1,0 +1,4 @@
+pwm.c:27:6:pwmInit	24	static
+pwm.c:37:6:pwmOpen	16	static
+pwm.c:48:6:pwmWrite	24	static
+pwm.c:54:10:pwmRead	24	static

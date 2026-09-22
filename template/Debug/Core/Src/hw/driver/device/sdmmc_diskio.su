@@ -1,0 +1,5 @@
+sdmmc_diskio.c:29:9:sdmmcDiskInit	16	static
+sdmmc_diskio.c:34:9:sdmmcDiskStatus	16	static
+sdmmc_diskio.c:39:9:sdmmcDiskRead	24	static
+sdmmc_diskio.c:45:9:sdmmcDiskWrite	24	static
+sdmmc_diskio.c:52:9:sdmmcDiskIoctl	16	static

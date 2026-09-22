@@ -32,7 +32,6 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -50,6 +49,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -58,6 +59,50 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define PB02_WS25Q64_QSPI_IO2_Pin GPIO_PIN_2
+#define PB02_WS25Q64_QSPI_IO2_GPIO_Port GPIOE
+#define PE03_VDD_LED_GPIO_O_Pin GPIO_PIN_3
+#define PE03_VDD_LED_GPIO_O_GPIO_Port GPIOE
+#define PC13_VDD_LED_SW_GPIO_I_Pin GPIO_PIN_13
+#define PC13_VDD_LED_SW_GPIO_I_GPIO_Port GPIOC
+#define PA01_RC522_SPI1_CS_GPIO_O_Pin GPIO_PIN_1
+#define PA01_RC522_SPI1_CS_GPIO_O_GPIO_Port GPIOA
+#define PA02_RC522_SPI1_RST_GPIO_O_Pin GPIO_PIN_2
+#define PA02_RC522_SPI1_RST_GPIO_O_GPIO_Port GPIOA
+#define PB02_W25Q64_QSPI_CLK_Pin GPIO_PIN_2
+#define PB02_W25Q64_QSPI_CLK_GPIO_Port GPIOB
+#define PE08_RELAY_CTRL_Pin GPIO_PIN_8
+#define PE08_RELAY_CTRL_GPIO_Port GPIOE
+#define PE09_FS90R_PWM_Pin GPIO_PIN_9
+#define PE09_FS90R_PWM_GPIO_Port GPIOE
+#define PB10_SSD1306_SCL_I2C_Pin GPIO_PIN_10
+#define PB10_SSD1306_SCL_I2C_GPIO_Port GPIOB
+#define PB11_SSD1306_SDA_I2C_Pin GPIO_PIN_11
+#define PB11_SSD1306_SDA_I2C_GPIO_Port GPIOB
+#define PB10_ESP_UART_TX_Pin GPIO_PIN_8
+#define PB10_ESP_UART_TX_GPIO_Port GPIOD
+#define PB11_ESP_UART_RX_Pin GPIO_PIN_9
+#define PB11_ESP_UART_RX_GPIO_Port GPIOD
+#define PD11_WS25Q64_QSPI_IO0_Pin GPIO_PIN_11
+#define PD11_WS25Q64_QSPI_IO0_GPIO_Port GPIOD
+#define PD12_WS25Q64_QSPI_IO1_Pin GPIO_PIN_12
+#define PD12_WS25Q64_QSPI_IO1_GPIO_Port GPIOD
+#define PD13_WS25Q64_QSPI_IO3_Pin GPIO_PIN_13
+#define PD13_WS25Q64_QSPI_IO3_GPIO_Port GPIOD
+#define PA09_CLI_UART_TX_Pin GPIO_PIN_9
+#define PA09_CLI_UART_TX_GPIO_Port GPIOA
+#define PA10_CLI_UART_RX_Pin GPIO_PIN_10
+#define PA10_CLI_UART_RX_GPIO_Port GPIOA
+#define PD06_W25Q64_SPI1_CS_GPIO_O_Pin GPIO_PIN_6
+#define PD06_W25Q64_SPI1_CS_GPIO_O_GPIO_Port GPIOD
+#define PD7_SPI1_MOSI_Pin GPIO_PIN_7
+#define PD7_SPI1_MOSI_GPIO_Port GPIOD
+#define P3B_SPI1_SCK_Pin GPIO_PIN_3
+#define P3B_SPI1_SCK_GPIO_Port GPIOB
+#define PB4_SPI1_MISO_Pin GPIO_PIN_4
+#define PB4_SPI1_MISO_GPIO_Port GPIOB
+#define PB06_WS25Q64_QSPI_NCS_Pin GPIO_PIN_6
+#define PB06_WS25Q64_QSPI_NCS_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

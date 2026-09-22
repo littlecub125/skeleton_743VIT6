@@ -1,0 +1,4 @@
+qspi.c:34:6:qspiInit	24	static
+qspi.c:44:6:qspiOpen	16	static
+qspi.c:54:6:qspiIsOpen	16	static
+qspi.c:59:6:qspiCommand	24	static

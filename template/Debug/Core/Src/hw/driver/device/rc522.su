@@ -1,0 +1,9 @@
+rc522.c:29:6:rc522Init	16	static
+rc522.c:67:13:rc522PcdTransceive	56	static
+rc522.c:115:6:rc522IsCardPresent	32	static
+rc522.c:129:6:rc522ReadUid	40	static
+rc522.c:157:16:rc522ReadReg	32	static
+rc522.c:168:13:rc522CsSelect	16	static
+rc522.c:173:13:rc522Rst	16	static
+rc522.c:178:13:rc522WriteReg	32	static
+rc522.c:188:13:cliRc522	40	static
