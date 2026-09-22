@@ -1,5 +1,6 @@
 Core/Src/ap/util/log.o: ../Core/Src/ap/util/log.c \
  D:/study/personal_project/template/template/Core/Inc/ap/util/log.h \
+ D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
  ../Core/Inc/main.h ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
@@ -43,7 +44,6 @@ Core/Src/ap/util/log.o: ../Core/Src/ap/util/log.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/device/sdmmc_diskio.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/sdmmc.h \
  ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
@@ -52,6 +52,8 @@ Core/Src/ap/util/log.o: ../Core/Src/ap/util/log.c \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h
 
 D:/study/personal_project/template/template/Core/Inc/ap/util/log.h:
+
+D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
@@ -140,8 +142,6 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
-
-D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/device/sdmmc_diskio.h:
 

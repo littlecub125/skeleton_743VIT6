@@ -13606,7 +13606,7 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
 LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a
 LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+dp/hard\libgcc.a
 
-.debug_info     0x0000000000000000    0x4d5b8
+.debug_info     0x0000000000000000    0x4d5c6
  .debug_info    0x0000000000000000      0xd13 ./Core/Src/Lib/fonts.o
  .debug_info    0x0000000000000d13      0xe65 ./Core/Src/ap/thread/info.o
  .debug_info    0x0000000000001b78      0xd87 ./Core/Src/ap/thread/service.o
@@ -13625,37 +13625,37 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_info    0x00000000000104ac     0x16ea ./Core/Src/hw/driver/device/ssd1306.o
  .debug_info    0x0000000000011b96     0x12e0 ./Core/Src/hw/driver/device/w25q64.o
  .debug_info    0x0000000000012e76     0x2d7b ./Core/Src/hw/hw.o
- .debug_info    0x0000000000015bf1     0x3efd ./Core/Src/main.o
- .debug_info    0x0000000000019aee     0x3759 ./Core/Src/stm32h7xx_hal_msp.o
- .debug_info    0x000000000001d247      0xc21 ./Core/Src/stm32h7xx_it.o
- .debug_info    0x000000000001de68      0xfa8 ./Core/Src/syscalls.o
- .debug_info    0x000000000001ee10      0xa25 ./Core/Src/sysmem.o
- .debug_info    0x000000000001f835     0x1787 ./Core/Src/system_stm32h7xx.o
- .debug_info    0x0000000000020fbc       0x22 ./Core/Startup/startup_stm32h743vitx.o
- .debug_info    0x0000000000020fde     0x1f9d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
- .debug_info    0x0000000000022f7b     0x294b ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.o
- .debug_info    0x00000000000258c6     0x1c13 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
- .debug_info    0x00000000000274d9     0x17e6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
- .debug_info    0x0000000000028cbf     0x2db8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
- .debug_info    0x000000000002ba77     0x18b6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
- .debug_info    0x000000000002d32d     0x1b45 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
- .debug_info    0x000000000002ee72     0x1da9 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
- .debug_info    0x0000000000030c1b     0x1951 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
- .debug_info    0x000000000003256c     0x1d00 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
- .debug_info    0x000000000003426c     0x2279 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.o
- .debug_info    0x00000000000364e5     0x1fc7 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.o
- .debug_info    0x00000000000384ac     0x37ca ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
- .debug_info    0x000000000003bc76     0x225f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
- .debug_info    0x000000000003ded5     0x558a ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
- .debug_info    0x000000000004345f     0x19a9 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
- .debug_info    0x0000000000044e08     0x1daf ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.o
- .debug_info    0x0000000000046bb7      0xfc1 ./FATFS/App/fatfs.o
- .debug_info    0x0000000000047b78      0xe56 ./FATFS/Target/user_diskio.o
- .debug_info    0x00000000000489ce      0xf05 ./Middlewares/Third_Party/FatFs/src/diskio.o
- .debug_info    0x00000000000498d3     0x2e4f ./Middlewares/Third_Party/FatFs/src/ff.o
- .debug_info    0x000000000004c722      0xe96 ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.o
+ .debug_info    0x0000000000015bf1     0x3f0b ./Core/Src/main.o
+ .debug_info    0x0000000000019afc     0x3759 ./Core/Src/stm32h7xx_hal_msp.o
+ .debug_info    0x000000000001d255      0xc21 ./Core/Src/stm32h7xx_it.o
+ .debug_info    0x000000000001de76      0xfa8 ./Core/Src/syscalls.o
+ .debug_info    0x000000000001ee1e      0xa25 ./Core/Src/sysmem.o
+ .debug_info    0x000000000001f843     0x1787 ./Core/Src/system_stm32h7xx.o
+ .debug_info    0x0000000000020fca       0x22 ./Core/Startup/startup_stm32h743vitx.o
+ .debug_info    0x0000000000020fec     0x1f9d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
+ .debug_info    0x0000000000022f89     0x294b ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.o
+ .debug_info    0x00000000000258d4     0x1c13 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
+ .debug_info    0x00000000000274e7     0x17e6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
+ .debug_info    0x0000000000028ccd     0x2db8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
+ .debug_info    0x000000000002ba85     0x18b6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
+ .debug_info    0x000000000002d33b     0x1b45 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
+ .debug_info    0x000000000002ee80     0x1da9 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
+ .debug_info    0x0000000000030c29     0x1951 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
+ .debug_info    0x000000000003257a     0x1d00 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
+ .debug_info    0x000000000003427a     0x2279 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.o
+ .debug_info    0x00000000000364f3     0x1fc7 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.o
+ .debug_info    0x00000000000384ba     0x37ca ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
+ .debug_info    0x000000000003bc84     0x225f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
+ .debug_info    0x000000000003dee3     0x558a ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
+ .debug_info    0x000000000004346d     0x19a9 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
+ .debug_info    0x0000000000044e16     0x1daf ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.o
+ .debug_info    0x0000000000046bc5      0xfc1 ./FATFS/App/fatfs.o
+ .debug_info    0x0000000000047b86      0xe56 ./FATFS/Target/user_diskio.o
+ .debug_info    0x00000000000489dc      0xf05 ./Middlewares/Third_Party/FatFs/src/diskio.o
+ .debug_info    0x00000000000498e1     0x2e4f ./Middlewares/Third_Party/FatFs/src/ff.o
+ .debug_info    0x000000000004c730      0xe96 ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.o
 
-.debug_abbrev   0x0000000000000000     0x7bf7
+.debug_abbrev   0x0000000000000000     0x7c0f
  .debug_abbrev  0x0000000000000000      0x226 ./Core/Src/Lib/fonts.o
  .debug_abbrev  0x0000000000000226      0x2be ./Core/Src/ap/thread/info.o
  .debug_abbrev  0x00000000000004e4      0x247 ./Core/Src/ap/thread/service.o
@@ -13674,35 +13674,35 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_abbrev  0x0000000000002451      0x33a ./Core/Src/hw/driver/device/ssd1306.o
  .debug_abbrev  0x000000000000278b      0x26e ./Core/Src/hw/driver/device/w25q64.o
  .debug_abbrev  0x00000000000029f9      0x23d ./Core/Src/hw/hw.o
- .debug_abbrev  0x0000000000002c36      0x342 ./Core/Src/main.o
- .debug_abbrev  0x0000000000002f78      0x2f0 ./Core/Src/stm32h7xx_hal_msp.o
- .debug_abbrev  0x0000000000003268      0x1ef ./Core/Src/stm32h7xx_it.o
- .debug_abbrev  0x0000000000003457      0x286 ./Core/Src/syscalls.o
- .debug_abbrev  0x00000000000036dd      0x1bf ./Core/Src/sysmem.o
- .debug_abbrev  0x000000000000389c      0x262 ./Core/Src/system_stm32h7xx.o
- .debug_abbrev  0x0000000000003afe       0x12 ./Core/Startup/startup_stm32h743vitx.o
- .debug_abbrev  0x0000000000003b10      0x31b ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
- .debug_abbrev  0x0000000000003e2b      0x31b ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.o
- .debug_abbrev  0x0000000000004146      0x409 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
- .debug_abbrev  0x000000000000454f      0x2cb ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
- .debug_abbrev  0x000000000000481a      0x2e6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
- .debug_abbrev  0x0000000000004b00      0x29e ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
- .debug_abbrev  0x0000000000004d9e      0x350 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
- .debug_abbrev  0x00000000000050ee      0x2e6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
- .debug_abbrev  0x00000000000053d4      0x322 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
- .debug_abbrev  0x00000000000056f6      0x31d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
- .debug_abbrev  0x0000000000005a13      0x2ee ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.o
- .debug_abbrev  0x0000000000005d01      0x313 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.o
- .debug_abbrev  0x0000000000006014      0x2f9 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
- .debug_abbrev  0x000000000000630d      0x301 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
- .debug_abbrev  0x000000000000660e      0x37d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
- .debug_abbrev  0x000000000000698b      0x33d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
- .debug_abbrev  0x0000000000006cc8      0x2d3 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.o
- .debug_abbrev  0x0000000000006f9b      0x227 ./FATFS/App/fatfs.o
- .debug_abbrev  0x00000000000071c2      0x24c ./FATFS/Target/user_diskio.o
- .debug_abbrev  0x000000000000740e      0x255 ./Middlewares/Third_Party/FatFs/src/diskio.o
- .debug_abbrev  0x0000000000007663      0x30e ./Middlewares/Third_Party/FatFs/src/ff.o
- .debug_abbrev  0x0000000000007971      0x286 ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.o
+ .debug_abbrev  0x0000000000002c36      0x35a ./Core/Src/main.o
+ .debug_abbrev  0x0000000000002f90      0x2f0 ./Core/Src/stm32h7xx_hal_msp.o
+ .debug_abbrev  0x0000000000003280      0x1ef ./Core/Src/stm32h7xx_it.o
+ .debug_abbrev  0x000000000000346f      0x286 ./Core/Src/syscalls.o
+ .debug_abbrev  0x00000000000036f5      0x1bf ./Core/Src/sysmem.o
+ .debug_abbrev  0x00000000000038b4      0x262 ./Core/Src/system_stm32h7xx.o
+ .debug_abbrev  0x0000000000003b16       0x12 ./Core/Startup/startup_stm32h743vitx.o
+ .debug_abbrev  0x0000000000003b28      0x31b ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
+ .debug_abbrev  0x0000000000003e43      0x31b ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.o
+ .debug_abbrev  0x000000000000415e      0x409 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
+ .debug_abbrev  0x0000000000004567      0x2cb ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
+ .debug_abbrev  0x0000000000004832      0x2e6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
+ .debug_abbrev  0x0000000000004b18      0x29e ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
+ .debug_abbrev  0x0000000000004db6      0x350 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
+ .debug_abbrev  0x0000000000005106      0x2e6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
+ .debug_abbrev  0x00000000000053ec      0x322 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
+ .debug_abbrev  0x000000000000570e      0x31d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
+ .debug_abbrev  0x0000000000005a2b      0x2ee ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.o
+ .debug_abbrev  0x0000000000005d19      0x313 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.o
+ .debug_abbrev  0x000000000000602c      0x2f9 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
+ .debug_abbrev  0x0000000000006325      0x301 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
+ .debug_abbrev  0x0000000000006626      0x37d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
+ .debug_abbrev  0x00000000000069a3      0x33d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
+ .debug_abbrev  0x0000000000006ce0      0x2d3 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.o
+ .debug_abbrev  0x0000000000006fb3      0x227 ./FATFS/App/fatfs.o
+ .debug_abbrev  0x00000000000071da      0x24c ./FATFS/Target/user_diskio.o
+ .debug_abbrev  0x0000000000007426      0x255 ./Middlewares/Third_Party/FatFs/src/diskio.o
+ .debug_abbrev  0x000000000000767b      0x30e ./Middlewares/Third_Party/FatFs/src/ff.o
+ .debug_abbrev  0x0000000000007989      0x286 ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.o
 
 .debug_aranges  0x0000000000000000     0x2448
  .debug_aranges
@@ -14106,7 +14106,7 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_str     0x000000000017e28e       0x42 ./Core/Src/hw/hw.o
                                      0x17d6df (size before relaxing)
  .debug_str     0x000000000017e2d0      0x760 ./Core/Src/main.o
-                                     0x17e105 (size before relaxing)
+                                     0x17e10d (size before relaxing)
  .debug_str     0x000000000017ea30      0x459 ./Core/Src/stm32h7xx_hal_msp.o
                                      0x17c1d7 (size before relaxing)
  .debug_str     0x000000000017ee89       0xbd ./Core/Src/stm32h7xx_it.o
