@@ -1,5 +1,6 @@
-adc.c:32:6:adcInit	32	static
-adc.c:65:6:adcOpen	16	static
-adc.c:75:10:adcRead	16	static
-adc.c:83:9:adcReadVoltage	24	static
-adc.c:105:13:cliAdc	40	static
+adc.c:34:6:adcInit	32	static
+adc.c:75:13:adc3BdmaWorkaround	16	static
+adc.c:92:6:adcOpen	16	static
+adc.c:102:10:adcRead	16	static
+adc.c:110:9:adcReadVoltage	24	static
+adc.c:131:13:cliAdc	40	static

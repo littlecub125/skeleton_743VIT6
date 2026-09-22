@@ -10,6 +10,7 @@
 
 //-- Definition
 //
+extern DMA_HandleTypeDef hdma_adc3;
 #define ADC_DMA_BUF_BASE  ((volatile uint16_t *)0x38000000)
 #define TS_CAL1  (*(uint16_t*)0x1FF1E820)   // 30°C 기준 raw
 #define TS_CAL2  (*(uint16_t*)0x1FF1E840)   // 110°C 기준 raw
@@ -23,6 +24,7 @@ typedef struct
 //-- Functions
 //
 static void cliAdc(int argc, char *argv[]);
+static void adc3BdmaWorkaround(void);
 
 //-- Variables
 //
@@ -53,14 +55,39 @@ bool adcInit(ADC_HandleTypeDef *h_adc_list[])
       ch_count++;
     }
 
-    HAL_ADC_Start_DMA(adc_tbl[i].h_adc, (uint32_t*) &adc_dma_buf[i],
-        ch_count);
+    if (HAL_ADC_Start_DMA(adc_tbl[i].h_adc, (uint32_t*) &adc_dma_buf[i],
+        ch_count) == HAL_OK)
+    {
+      if (adc_tbl[i].h_adc->Instance == ADC3)
+        adc3BdmaWorkaround();
+    }
+
     i += ch_count;
   }
 
   cliAdd("adc", cliAdc);
   return true;
 }
+
+// ADC3(BDMA) 전용 우회 — HAL_DMA_Init()이 BDMA 채널의 CIRC/MINC/PSIZE/MSIZE와
+// DMAMUX2 요청ID(17=ADC3)를 제대로 못 걸어주는 문제를 수동으로 고정한다.
+// hdma_adc3/DMAMUX2를 직접 건드리므로 다른 핸들(ADC1/2 등)엔 절대 적용하면 안 됨.
+static void adc3BdmaWorkaround(void)
+{
+  BDMA_Channel_TypeDef *bd = (BDMA_Channel_TypeDef*) hdma_adc3.Instance;
+
+  CLEAR_BIT(bd->CCR, BDMA_CCR_EN);
+  while (bd->CCR & BDMA_CCR_EN);
+
+  MODIFY_REG(bd->CCR,
+      BDMA_CCR_PSIZE | BDMA_CCR_MSIZE | BDMA_CCR_MINC | BDMA_CCR_PINC | BDMA_CCR_CIRC | BDMA_CCR_DIR,
+      BDMA_CCR_CIRC | BDMA_CCR_MINC | (1U << BDMA_CCR_PSIZE_Pos) | (1U << BDMA_CCR_MSIZE_Pos));
+
+  SET_BIT(bd->CCR, BDMA_CCR_EN);
+
+  DMAMUX2_Channel0->CCR = 17;
+}
+
 
 bool adcOpen(AdcChName_t name)
 {
@@ -100,7 +127,6 @@ int32_t adcReadVoltage(AdcChName_t ch)
 
   return ret;
 }
-
 
 static void cliAdc(int argc, char *argv[])
 {
@@ -146,7 +172,7 @@ static void cliAdc(int argc, char *argv[])
     {
       cliPrintf("TS_CAL1=%u", TS_CAL1);
       cliPrintf("TS_CAL2=%u", TS_CAL2);
-
+      ret = true;
     }
   }
 
