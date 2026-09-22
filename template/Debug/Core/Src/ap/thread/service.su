@@ -1,0 +1,4 @@
+service.c:34:6:serviceInit	4	static
+service.c:39:6:serviceUpdate	16	static
+service.c:74:13:serviceSetDoor	16	static
+service.c:83:13:checkItemTaken	16	static

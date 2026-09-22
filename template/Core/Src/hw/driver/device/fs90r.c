@@ -52,10 +52,9 @@ bool fs90rCmdSet(FS90R_Cmd_t cmd)
       break;
   }
 
-
+  pwmWrite(HW_PWM_CH_MOTOR_1, freq_set);   // ← 이 줄 추가해야 함, 지금 없음
   return ret;
 }
-
 
 static void cliFs90r(int argc, char *argv[])
 {

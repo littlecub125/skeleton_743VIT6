@@ -20,7 +20,8 @@
 #ifndef INC_AP_THREAD_INFO_H_
 #define INC_AP_THREAD_INFO_H_
 
-#include "uart.h"
+#include "hw_def.h"
+
 
 typedef void (*cli_func_t)(int argc, char *argv[]);
 
@@ -29,5 +30,6 @@ void infoCliUpdate(void);
 bool cliAdd(const char *name, cli_func_t func);
 uint32_t cliPrintf(const char *fmt, ...);
 bool cliCheck(const char *buf, const char *cmd);
+bool cliKeepLoop(void);
 
 #endif /* INC_AP_THREAD_INFO_H_ */

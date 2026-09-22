@@ -1,0 +1,7 @@
+log.c:28:6:logInit	8	static
+log.c:35:6:logAdd	144	static
+log.c:60:6:logUpdate	4	static
+log.c:65:13:logFlush	592	static
+log.c:83:13:logClear	592	static
+log.c:103:6:logShow	800	static
+log.c:145:13:cliLog	24	static

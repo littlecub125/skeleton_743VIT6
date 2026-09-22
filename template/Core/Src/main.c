@@ -25,7 +25,8 @@
 /* USER CODE BEGIN Includes */
 #include "hw.h"
 #include "info.h"
-
+#include "service.h"
+#include "log.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -129,11 +130,13 @@ int main(void)
       .h_spi = { &hspi1 },
       .h_qspi = { &hqspi },
       .h_adc = { &hadc3, &hadc3 },
-      .h_tim = { &htim1 }
+      .h_tim = { &htim1 },
+      .h_sd = { &hsd1 }
       };
     /* @formatter:on */
   hwInit(&hw_cfg);
   infoCliInit();
+  logInit();
 
   /* USER CODE END 2 */
 
@@ -142,6 +145,7 @@ int main(void)
   while (1)
   {
     infoCliUpdate();
+    serviceUpdate();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -373,7 +377,7 @@ static void MX_SDMMC1_SD_Init(void)
   hsd1.Init.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
   hsd1.Init.BusWide = SDMMC_BUS_WIDE_4B;
   hsd1.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
-  hsd1.Init.ClockDiv = 0;
+  hsd1.Init.ClockDiv = 23;
   if (HAL_SD_Init(&hsd1) != HAL_OK)
   {
     Error_Handler();
@@ -653,6 +657,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA03_SS5GL_SW_GPIO_I_Pin */
+  GPIO_InitStruct.Pin = PA03_SS5GL_SW_GPIO_I_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(PA03_SS5GL_SW_GPIO_I_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PD06_W25Q64_SPI1_CS_GPIO_O_Pin */
   GPIO_InitStruct.Pin = PD06_W25Q64_SPI1_CS_GPIO_O_Pin;

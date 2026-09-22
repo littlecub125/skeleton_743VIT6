@@ -694,6 +694,40 @@ void SSD1306_OFF(void)
   ssd1306WriteCmd(0xAE);
 }
 
+void ssd1306SetStr(const char *sentence)
+{
+  FontDef_t *font = &Font_11x18;
+  uint16_t y = 0;
+
+  SSD1306_Fill(SSD1306_COLOR_BLACK);
+  SSD1306_GotoXY(0, y);
+
+  while (*sentence)
+  {
+    if (*sentence == '\n')             // 명시적 줄바꿈 처리
+    {
+      y += font->FontHeight;
+      if (y + font->FontHeight > SSD1306_HEIGHT)
+        break;
+      SSD1306_GotoXY(0, y);
+      sentence++;
+      continue;
+    }
+
+    if (SSD1306_Putc(*sentence, font, SSD1306_COLOR_WHITE) == 0)
+    {
+      y += font->FontHeight;
+      if (y + font->FontHeight > SSD1306_HEIGHT)
+        break;
+      SSD1306_GotoXY(0, y);
+      continue;
+    }
+    sentence++;
+  }
+
+  SSD1306_UpdateScreen();
+}
+
 static void cliSsd1306(int argc, char *argv[])
 {
   bool ret = false;

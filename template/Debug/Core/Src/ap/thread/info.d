@@ -1,6 +1,5 @@
 Core/Src/ap/thread/info.o: ../Core/Src/ap/thread/info.c \
  D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
  D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h \
  ../Core/Inc/main.h ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
@@ -43,11 +42,10 @@ Core/Src/ap/thread/info.o: ../Core/Src/ap/thread/info.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
+ D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h
 
 D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 
@@ -136,3 +134,5 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
+
+D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:

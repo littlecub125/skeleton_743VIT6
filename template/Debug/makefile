@@ -18,6 +18,7 @@ RM := rm -rf
 -include Core/Src/hw/driver/device/subdir.mk
 -include Core/Src/hw/driver/core/subdir.mk
 -include Core/Src/hw/subdir.mk
+-include Core/Src/ap/util/subdir.mk
 -include Core/Src/ap/thread/subdir.mk
 -include Core/Src/Lib/subdir.mk
 -include Core/Src/subdir.mk

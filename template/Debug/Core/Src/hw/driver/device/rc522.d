@@ -44,7 +44,6 @@ Core/Src/hw/driver/device/rc522.o: ../Core/Src/hw/driver/device/rc522.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h \
- D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h \
  D:/study/personal_project/template/template/Core/Inc/hw/driver/core/spi.h
 
@@ -139,8 +138,6 @@ D:/study/personal_project/template/template/Core/Inc/hw/hw_def.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 
 D:/study/personal_project/template/template/Core/Inc/ap/thread/info.h:
-
-D:/study/personal_project/template/template/Core/Inc/hw/driver/core/uart.h:
 
 D:/study/personal_project/template/template/Core/Inc/hw/driver/core/gpio.h:
 
