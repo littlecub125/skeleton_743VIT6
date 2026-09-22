@@ -5,3 +5,5 @@ info.c:85:13:cliExecute	64	static
 info.c:110:10:cliPrintf	144	static
 info.c:128:6:cliCheck	16	static
 info.c:133:6:cliKeepLoop	16	static
+info.c:144:6:cliLineUp	40	static
+info.c:151:6:cliLineDown	40	static

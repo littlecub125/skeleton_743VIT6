@@ -1,5 +1,5 @@
-adc.c:30:6:adcInit	24	static
-adc.c:41:6:adcOpen	16	static
-adc.c:51:10:adcRead	24	static
-adc.c:71:9:adcReadVoltage	24	static
-adc.c:93:13:cliAdc	40	static
+adc.c:32:6:adcInit	32	static
+adc.c:65:6:adcOpen	16	static
+adc.c:75:10:adcRead	16	static
+adc.c:83:9:adcReadVoltage	24	static
+adc.c:105:13:cliAdc	40	static

@@ -94,11 +94,11 @@ typedef enum
 #ifdef  _USE_HW_ADC
 typedef enum
 {
-  HW_ADC_CH_VBAT,
-  HW_ADC_CH_TEMP,
+  HW_ADC_CH_VBAT,   // ADC3
+  HW_ADC_CH_TEMP,   // ADC3
+
   HW_ADC_CH_MAX,
 } AdcChName_t;
-
 #endif
 
 #ifdef _USE_HW_SDMMC

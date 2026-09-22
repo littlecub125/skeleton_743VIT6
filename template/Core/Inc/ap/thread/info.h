@@ -31,5 +31,7 @@ bool cliAdd(const char *name, cli_func_t func);
 uint32_t cliPrintf(const char *fmt, ...);
 bool cliCheck(const char *buf, const char *cmd);
 bool cliKeepLoop(void);
+void cliLineUp(uint8_t count);
+void cliLineDown(uint8_t count);
 
 #endif /* INC_AP_THREAD_INFO_H_ */

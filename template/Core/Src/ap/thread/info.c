@@ -140,3 +140,17 @@ bool cliKeepLoop(void)
   }
   return true;         // 계속 진행
 }
+
+void cliLineUp(uint8_t count)
+{
+  char buf[16];
+  int len = snprintf(buf, sizeof(buf), "\x1b[%uA", count);
+  uartWrite(HW_UART_CH_CLI, (uint8_t*) buf, (uint32_t) len);
+}
+
+void cliLineDown(uint8_t count)
+{
+  char buf[16];
+  int len = snprintf(buf, sizeof(buf), "\x1b[%uB", count);
+  uartWrite(HW_UART_CH_CLI, (uint8_t*) buf, (uint32_t) len);
+}

@@ -45,6 +45,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc3;
+DMA_HandleTypeDef hdma_adc3;
 
 I2C_HandleTypeDef hi2c2;
 
@@ -76,6 +77,7 @@ static void MX_ADC3_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_SDMMC1_SD_Init(void);
+static void MX_BDMA_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -121,6 +123,7 @@ int main(void)
   MX_TIM1_Init();
   MX_I2C2_Init();
   MX_SDMMC1_SD_Init();
+  MX_BDMA_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
   /* @formatter:off */
@@ -236,12 +239,12 @@ static void MX_ADC3_Init(void)
   hadc3.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc3.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc3.Init.LowPowerAutoWait = DISABLE;
-  hadc3.Init.ContinuousConvMode = DISABLE;
+  hadc3.Init.ContinuousConvMode = ENABLE;
   hadc3.Init.NbrOfConversion = 2;
   hadc3.Init.DiscontinuousConvMode = DISABLE;
   hadc3.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc3.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-  hadc3.Init.ConversionDataManagement = ADC_CONVERSIONDATA_DR;
+  hadc3.Init.ConversionDataManagement = ADC_CONVERSIONDATA_DMA_CIRCULAR;
   hadc3.Init.Overrun = ADC_OVR_DATA_PRESERVED;
   hadc3.Init.LeftBitShift = ADC_LEFTBITSHIFT_NONE;
   hadc3.Init.OversamplingMode = DISABLE;
@@ -609,6 +612,22 @@ static void MX_USART3_UART_Init(void)
   /* USER CODE BEGIN USART3_Init 2 */
 
   /* USER CODE END USART3_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_BDMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_BDMA_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* BDMA_Channel0_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(BDMA_Channel0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(BDMA_Channel0_IRQn);
 
 }
 

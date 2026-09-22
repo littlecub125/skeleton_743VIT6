@@ -10,6 +10,7 @@
 
 //-- Definition
 //
+#define ADC_DMA_BUF_BASE  ((volatile uint16_t *)0x38000000)
 #define TS_CAL1  (*(uint16_t*)0x1FF1E820)   // 30°C 기준 raw
 #define TS_CAL2  (*(uint16_t*)0x1FF1E840)   // 110°C 기준 raw
 
@@ -25,6 +26,7 @@ static void cliAdc(int argc, char *argv[]);
 
 //-- Variables
 //
+static volatile uint16_t *const adc_dma_buf = ADC_DMA_BUF_BASE;
 static adc_tbl_t adc_tbl[HW_ADC_CH_MAX];
 
 bool adcInit(ADC_HandleTypeDef *h_adc_list[])
@@ -34,6 +36,28 @@ bool adcInit(ADC_HandleTypeDef *h_adc_list[])
     adc_tbl[i].h_adc = h_adc_list[i];
     adc_tbl[i].is_open = false;
   }
+
+  int i = 0;
+  while (i < HW_ADC_CH_MAX)
+  {
+    if (adc_tbl[i].h_adc == NULL)
+    {
+      i++;
+      continue;
+    }
+
+    int ch_count = 1;
+    while (i + ch_count < HW_ADC_CH_MAX
+        && adc_tbl[i + ch_count].h_adc == adc_tbl[i].h_adc)
+    {
+      ch_count++;
+    }
+
+    HAL_ADC_Start_DMA(adc_tbl[i].h_adc, (uint32_t*) &adc_dma_buf[i],
+        ch_count);
+    i += ch_count;
+  }
+
   cliAdd("adc", cliAdc);
   return true;
 }
@@ -50,23 +74,11 @@ bool adcOpen(AdcChName_t name)
 
 uint16_t adcRead(AdcChName_t ch)
 {
-  if (ch != HW_ADC_CH_VBAT && ch != HW_ADC_CH_TEMP)
+  if (ch >= HW_ADC_CH_MAX)
     return 0;
-
-  ADC_HandleTypeDef *h_adc = adc_tbl[ch].h_adc;
-
-  HAL_ADC_Start(h_adc);
-
-  HAL_ADC_PollForConversion(h_adc, 10);
-  uint16_t vbat_raw = HAL_ADC_GetValue(h_adc);   // Rank 1
-
-  HAL_ADC_PollForConversion(h_adc, 10);
-  uint16_t temp_raw = HAL_ADC_GetValue(h_adc);   // Rank 2
-
-  HAL_ADC_Stop(h_adc);
-
-  return (ch == HW_ADC_CH_VBAT) ? vbat_raw : temp_raw;
+  return adc_dma_buf[ch];
 }
+
 
 int32_t adcReadVoltage(AdcChName_t ch)
 {
@@ -99,20 +111,35 @@ static void cliAdc(int argc, char *argv[])
     if (cliCheck(argv[1], "read"))
     {
       int32_t adc_read[HW_ADC_CH_MAX] = { 0, };
-      for (int i = 0; i < HW_ADC_CH_MAX; i++)
+      while (cliKeepLoop())
       {
-        adc_read[i] = adcReadVoltage(i);
+        for (int i = 0; i < HW_ADC_CH_MAX; i++)
+        {
+          adc_read[i] = adcReadVoltage(i);
+        }
+        cliPrintf("V_BAT : %d mV", adc_read[0]);
+        cliPrintf("V_TEMP : %d C", adc_read[1]);
+        HAL_Delay(100);
+        cliLineUp(2);
       }
-      cliPrintf("V_BAT : %d mV", adc_read[0]);
-      cliPrintf("V_TEMP : %d C", adc_read[1]);
+      cliLineDown(2);
       ret = true;
     }
     else if (cliCheck(argv[1], "raw"))
     {
-      uint16_t vbat_raw = adcRead(HW_ADC_CH_VBAT);
-      uint16_t temp_raw = adcRead(HW_ADC_CH_TEMP);
-      cliPrintf("vbat_raw=%u", vbat_raw);
-      cliPrintf("temp_raw=%u", temp_raw);
+      uint16_t vbat_raw = 0;
+      uint16_t temp_raw = 0;
+
+      while (cliKeepLoop())
+      {
+        vbat_raw = adcRead(HW_ADC_CH_VBAT);
+        temp_raw = adcRead(HW_ADC_CH_TEMP);
+        cliPrintf("vbat_raw=%u", vbat_raw);
+        cliPrintf("temp_raw=%u", temp_raw);
+        HAL_Delay(100);
+        cliLineUp(2);
+      }
+      cliLineDown(2);
       ret = true;
     }
     else if (cliCheck(argv[1], "temp"))
@@ -127,5 +154,6 @@ static void cliAdc(int argc, char *argv[])
   if (ret == false)
   {
     cliPrintf("adc read");
+    cliPrintf("adc raw");
   }
 }
